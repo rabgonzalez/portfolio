@@ -1,11 +1,9 @@
 import './App.css'
-import Router from './components/Router'
+import Background from './components/Background'
 
 function App() {
   return (
-    <div id='background'>
-      <Router />
-    </div>
+    <Background />
   )
 }
 

@@ -18,11 +18,9 @@ export default function Dock() {
               >
                 <Icon size={26} strokeWidth={1.8} className="text-white" />
               </Link>
-              {/* Tooltip */}
               <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs bg-black/70 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 {label}
               </span>
-              {/* Indicador de página activa */}
               {isActive && (
                 <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full" />
               )}

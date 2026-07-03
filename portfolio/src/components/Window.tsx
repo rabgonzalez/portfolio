@@ -2,19 +2,40 @@ import { useWindows } from '../context/WindowContext'
 import type { WindowInstance } from '../types'
 import { APP_REGISTRY } from '../utils'
 import { useDraggable } from '../hooks/useDraggable'
+import { useRef } from 'react'
+
+const WINDOW_WIDTH = 600
 
 export default function Window({ instance }: { instance: WindowInstance }) {
     const { closeWindow, toggleMax, focusWindow, moveWindow } = useWindows()
     const { id, appId, max, zIndex, x, y } = instance
     const { title, component: Content } = APP_REGISTRY[appId]
+    const windowRef = useRef<HTMLDivElement>(null)
 
-    const { handlePointerDown } = useDraggable(
-        (newX, newY) => moveWindow(id, newX, newY),
-        max
-    )
+    const { handlePointerDown } = useDraggable((newX, newY) => moveWindow(id, newX, newY))
+
+    const dragWindow = (e: React.PointerEvent<HTMLDivElement>) => {
+        if (max) {
+            const rect = windowRef.current!.getBoundingClientRect()
+
+            // Relative position of cursor from window (0 to 1)
+            const relativeX = (e.clientX - rect.left) / rect.width
+
+            const newX = e.clientX - relativeX * WINDOW_WIDTH
+            const newY = rect.top
+
+            moveWindow(id, newX, newY)
+            toggleMax(id)
+            handlePointerDown(e, newX, newY)
+            return
+        }
+
+        handlePointerDown(e, x, y)
+    }
 
     return (
         <div
+            ref={windowRef}
             onPointerDown={() => focusWindow(id)}
             style={
                 max
@@ -25,7 +46,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                 }`}
         >
             <div
-                onPointerDown={(e) => handlePointerDown(e, x, y)}
+                onPointerDown={dragWindow}
                 className="window-titlebar flex items-center gap-2 px-4 py-2 bg-white/10 border-b border-white/20 cursor-move select-none"
             >
                 <div className="window-controls flex items-center gap-2">

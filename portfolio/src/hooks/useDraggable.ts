@@ -2,7 +2,6 @@ import { useRef, useCallback, useEffect } from 'react'
 
 export function useDraggable(
   onMove: (x: number, y: number) => void,
-  disabled = false
 ) {
   const dragState = useRef({ startX: 0, startY: 0, originX: 0, originY: 0 })
   const onMoveRef = useRef(onMove)
@@ -24,7 +23,6 @@ export function useDraggable(
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent, currentX: number, currentY: number) => {
-      if (disabled) return
       // If click comes from window controls, don't start dragging
       if ((e.target as HTMLElement).closest('.window-controls')) return
 
@@ -37,7 +35,7 @@ export function useDraggable(
       globalThis.addEventListener('pointermove', handlePointerMove)
       globalThis.addEventListener('pointerup', handlePointerUp)
     },
-    [disabled, handlePointerMove, handlePointerUp]
+    [handlePointerMove, handlePointerUp]
   )
 
   useEffect(() => {

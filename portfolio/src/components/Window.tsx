@@ -15,6 +15,8 @@ export default function Window({ instance }: { instance: WindowInstance }) {
     const { handlePointerDown } = useDraggable((newX, newY) => moveWindow(id, newX, newY))
 
     const dragWindow = (e: React.PointerEvent<HTMLDivElement>) => {
+        if ((e.target as HTMLElement).closest(".window-controls")) return;
+
         if (max) {
             const rect = windowRef.current!.getBoundingClientRect()
 

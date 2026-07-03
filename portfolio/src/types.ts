@@ -7,7 +7,6 @@ export type DockApp = { appId: AppId; icon: any; label: string }
 export type WindowInstance = {
     id: string
     appId: AppId
-    show: boolean
     max: boolean
     zIndex: number
     x: number
@@ -18,7 +17,6 @@ export type WindowContextType = {
     windows: WindowInstance[]
     openWindow: (appId: AppId) => void
     closeWindow: (id: string) => void
-    toggleShow: (id: string) => void
     toggleMax: (id: string) => void
     focusWindow: (id: string) => void
 }

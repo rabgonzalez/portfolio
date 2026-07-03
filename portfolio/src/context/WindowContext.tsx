@@ -11,7 +11,7 @@ export function WindowProvider({ children }: { children: ReactNode }) {
     const openWindow = (appId: AppId) => {
         const id = crypto.randomUUID()
         setWindows(prev => {
-            const offset = (prev.length % 8) * 30
+            const offset = (prev.length % 15) * 30
             return [
                 ...prev,
                 { id, appId, show: true, max: false, zIndex: nextZ++, x: 100 + offset, y: 80 + offset },
@@ -22,9 +22,6 @@ export function WindowProvider({ children }: { children: ReactNode }) {
     const closeWindow = (id: string) =>
         setWindows(prev => prev.filter(w => w.id !== id))
 
-    const toggleShow = (id: string) =>
-        setWindows(prev => prev.map(w => (w.id === id ? { ...w, show: !w.show } : w)))
-
     const toggleMax = (id: string) =>
         setWindows(prev => prev.map(w => (w.id === id ? { ...w, max: !w.max } : w)))
 
@@ -32,7 +29,7 @@ export function WindowProvider({ children }: { children: ReactNode }) {
         setWindows(prev => prev.map(w => (w.id === id ? { ...w, zIndex: nextZ++ } : w)))
 
     return (
-        <WindowContext.Provider value={{ windows, openWindow, closeWindow, toggleShow, toggleMax, focusWindow }}>
+        <WindowContext.Provider value={{ windows, openWindow, closeWindow, toggleMax, focusWindow }}>
             {children}
         </WindowContext.Provider>
     )

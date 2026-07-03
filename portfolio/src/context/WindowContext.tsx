@@ -30,8 +30,15 @@ export function WindowProvider({ children }: { children: ReactNode }) {
 
     const clearWindows = () => setWindows([])
 
+    const moveWindow = (id: string, x: number, y: number) => {
+        console.log(id, x, y)
+        setWindows(prev =>
+            prev.map(w => (w.id === id ? { ...w, x, y } : w))
+        )
+    }
+
     return (
-        <WindowContext.Provider value={{ windows, openWindow, closeWindow, toggleMax, focusWindow, clearWindows }}>
+        <WindowContext.Provider value={{ windows, openWindow, closeWindow, toggleMax, focusWindow, clearWindows, moveWindow }}>
             {children}
         </WindowContext.Provider>
     )

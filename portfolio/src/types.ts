@@ -20,4 +20,5 @@ export type WindowContextType = {
     toggleMax: (id: string) => void
     focusWindow: (id: string) => void
     clearWindows: () => void
+    moveWindow: (id: string, x: number, y: number) => void
 }

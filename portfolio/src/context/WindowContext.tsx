@@ -28,8 +28,10 @@ export function WindowProvider({ children }: { children: ReactNode }) {
     const focusWindow = (id: string) =>
         setWindows(prev => prev.map(w => (w.id === id ? { ...w, zIndex: nextZ++ } : w)))
 
+    const clearWindows = () => setWindows([])
+
     return (
-        <WindowContext.Provider value={{ windows, openWindow, closeWindow, toggleMax, focusWindow }}>
+        <WindowContext.Provider value={{ windows, openWindow, closeWindow, toggleMax, focusWindow, clearWindows }}>
             {children}
         </WindowContext.Provider>
     )

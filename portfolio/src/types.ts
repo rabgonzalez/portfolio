@@ -19,5 +19,5 @@ export type WindowContextType = {
     closeWindow: (id: string) => void
     toggleMax: (id: string) => void
     focusWindow: (id: string) => void
+    clearWindows: () => void
 }
-

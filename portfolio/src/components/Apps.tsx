@@ -1,6 +1,5 @@
 import type { DockApp } from "../types";
 import AppIcon from "./AppIcon";
-import Trash from "./Trash";
 
 export default function Apps({ apps }: { apps: DockApp[] }) {
   return (
@@ -12,7 +11,6 @@ export default function Apps({ apps }: { apps: DockApp[] }) {
             gap-8
           "
       >
-        <Trash />
         {apps.map(app => (
           <AppIcon
             key={app.appId}

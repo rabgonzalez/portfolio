@@ -1,7 +1,8 @@
-import { useRef, useCallback, useEffect } from 'react'
+import { useRef, useCallback, useEffect, type RefObject } from 'react'
 
 export function useDraggable(
   onMove: (x: number, y: number) => void,
+  elementRef?: RefObject<HTMLElement | null>
 ) {
   const dragState = useRef({ startX: 0, startY: 0, originX: 0, originY: 0 })
   const onMoveRef = useRef(onMove)

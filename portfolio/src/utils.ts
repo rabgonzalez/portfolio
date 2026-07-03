@@ -1,9 +1,10 @@
 import {
-  Home,
   Briefcase,
-  FolderKanban,
+  Folder,
   Mail,
   Settings as SettingsIcon,
+  Trash2,
+  UserRound,
 } from "lucide-react";
 import Profile from "./pages/Profile";
 import Experience from "./pages/Experience";
@@ -13,11 +14,16 @@ import Settings from "./pages/Settings";
 import type { DockApp } from "./types";
 
 export const DOCK_APPS: DockApp[] = [
-  { appId: "profile", icon: Home, label: "Profile" },
+  { appId: "profile", icon: UserRound, label: "Profile" },
   { appId: "experience", icon: Briefcase, label: "Experience" },
-  { appId: "projects", icon: FolderKanban, label: "Projects" },
+  { appId: "projects", icon: Folder, label: "Projects" },
   { appId: "contact", icon: Mail, label: "Contact" },
   { appId: "settings", icon: SettingsIcon, label: "Settings" },
+];
+
+export const APPS: DockApp[] = [
+  { appId: "trash", icon: Trash2, label: "Trash" },
+  ...DOCK_APPS,
 ];
 
 export const APP_REGISTRY = {
@@ -37,4 +43,5 @@ export const WALLPAPERS = [
   wallpaper + "/wallpaper3.png",
   wallpaper + "/wallpaper4.png",
   wallpaper + "/wallpaper5.png",
+  wallpaper + "/wallpaper6.png",
 ] as const;

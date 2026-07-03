@@ -6,7 +6,7 @@ export type DockApp = { appId: AppId; icon: any; label: string }
 
 export type WindowInstance = {
     id: string
-    appId: AppId
+    appId?: AppId
     max: boolean
     zIndex: number
     x: number

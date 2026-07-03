@@ -29,7 +29,6 @@ export default function Window({ instance }: { instance: WindowInstance }) {
             handlePointerDown(e, newX, newY)
             return
         }
-
         handlePointerDown(e, x, y)
     }
 

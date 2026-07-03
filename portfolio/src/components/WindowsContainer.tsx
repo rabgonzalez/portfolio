@@ -1,4 +1,4 @@
-import Window from "../components/Window"
+import Window from "./Window"
 import { useWindows } from "../context/WindowContext"
 
 export default function WindowsContainer() {

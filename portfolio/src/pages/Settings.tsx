@@ -13,7 +13,7 @@ export default function Settings() {
                     className={`aspect-video rounded-lg overflow-hidden border-2 transition-all ${wallpaper === url ? 'border-blue-400 scale-105' : 'border-transparent hover:border-white/40'
                         }`}
                 >
-                    <img src={url} alt="" className="w-full h-full object-cover" />
+                    <img src={url} alt="" className="w-full h-full object-cover" loading="lazy" />
                 </button>
             ))}
         </div>

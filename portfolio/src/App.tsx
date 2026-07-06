@@ -1,4 +1,3 @@
-import './App.css'
 import { WindowProvider } from './context/WindowContext'
 import WindowsContainer from './components/WindowsContainer'
 import Dock from './components/Dock'

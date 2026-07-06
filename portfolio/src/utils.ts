@@ -12,6 +12,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Settings from "./pages/Settings";
 import type { DockApp } from "./types";
+import Trash from "./pages/Trash";
 
 export const DOCK_APPS: DockApp[] = [
   { appId: "profile", icon: UserRound, label: "Profile" },
@@ -27,7 +28,7 @@ export const APPS: DockApp[] = [
 ];
 
 export const APP_REGISTRY = {
-  trash: { title: "Trash", component: null },
+  trash: { title: "Trash", component: Trash },
   profile: { title: "Profile", component: Profile },
   experience: { title: "Experience", component: Experience },
   projects: { title: "Projects", component: Projects },

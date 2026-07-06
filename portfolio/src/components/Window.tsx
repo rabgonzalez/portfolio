@@ -43,7 +43,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                     ? { zIndex, top: '1rem', left: '1rem', right: '1rem', bottom: '6rem' }
                     : { zIndex, top: y, left: x }
             }
-            className={`window fixed bg-white/10 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : 'w-[600px]'
+            className={`window fixed bg-white/20 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : 'w-[600px]'
                 }`}
         >
             <div
@@ -55,10 +55,10 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                     <button className="w-3 h-3 rounded-full bg-yellow-500" onClick={() => toggleMax(id)} />
                     <button className="w-3 h-3 rounded-full bg-green-500" onClick={() => closeWindow(id)} />
                 </div>
-                <span className="ml-2 text-sm text-white/80 font-medium">{title}</span>
+                <span className="ml-2 text-sm text-white/80 font-medium" style={{ fontWeight: 900 }}>{title}</span>
             </div>
             <div className="window-content p-6 text-white overflow-auto" style={max ? { maxHeight: 'calc(100% - 40px)' } : {}}>
-                <Content />
+                <Content windowId={id} />
             </div>
         </div>
     )

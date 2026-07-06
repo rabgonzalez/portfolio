@@ -14,7 +14,7 @@ export function WindowProvider({ children }: { children: ReactNode }) {
             const offset = (prev.length % 15) * 30
             return [
                 ...prev,
-                { id, appId, show: true, max: false, zIndex: nextZ++, x: 100 + offset, y: 80 + offset },
+                { id, appId, show: true, max: false, zIndex: nextZ++, x: 100 + offset, y: 20 + offset },
             ]
         })
     }

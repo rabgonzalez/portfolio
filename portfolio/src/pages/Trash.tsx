@@ -1,4 +1,4 @@
-import { TriangleAlert } from 'lucide-react'
+import { BrushCleaning } from 'lucide-react'
 import { useWindows } from '../context/WindowContext'
 
 export default function Trash({ windowId }: { windowId: string }) {
@@ -7,7 +7,7 @@ export default function Trash({ windowId }: { windowId: string }) {
     return (
         <div className="flex flex-col items-center justify-center w-full h-full px-8 py-6 text-center gap-1">
             <div className="flex items-center justify-center w-14 h-14 rounded-full bg-red-500/70 mb-3">
-                <TriangleAlert className="w-7 h-7 text-white" strokeWidth={2} />
+                <BrushCleaning className="w-7 h-7 text-white" strokeWidth={2} />
             </div>
 
             <h1 className="text-[30px] font-semibold text-white">

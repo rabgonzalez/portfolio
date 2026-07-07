@@ -1,0 +1,20 @@
+{
+    "languages": {
+        "english": "Inglés",
+        "spanish": "Español"
+    },
+    "apps": {
+        "cleaner": "Limpiador",
+        "profile": "Perfil",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "settings": "Configuración"
+    },
+    "pages": {
+        "profile": {
+            "title": "Hola, soy Ruben",
+            "description": "Soy un ingeniero de software full-stack con experiencia en diversos lenguajes y marcos de trabajo. Siempre estoy ansioso por aprender nuevas tecnologías y nuevas formas de mejorar mis habilidades."
+        }
+    }
+}

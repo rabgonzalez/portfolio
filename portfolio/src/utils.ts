@@ -15,25 +15,25 @@ import type { DockApp } from "./types";
 import Cleaner from "./pages/Cleaner";
 
 export const DOCK_APPS: DockApp[] = [
-  { appId: "profile", icon: UserRound, label: "Profile" },
-  { appId: "experience", icon: Briefcase, label: "Experience" },
-  { appId: "projects", icon: Folder, label: "Projects" },
-  { appId: "contact", icon: Mail, label: "Contact" },
-  { appId: "settings", icon: SettingsIcon, label: "Settings" },
+  { appId: "profile", icon: UserRound, label: "apps.profile" },
+  { appId: "experience", icon: Briefcase, label: "apps.experience" },
+  { appId: "projects", icon: Folder, label: "apps.projects" },
+  { appId: "contact", icon: Mail, label: "apps.contact" },
+  { appId: "settings", icon: SettingsIcon, label: "apps.settings" },
 ];
 
 export const APPS: DockApp[] = [
-  { appId: "cleaner", icon: BrushCleaning, label: "Cleaner" },
+  { appId: "cleaner", icon: BrushCleaning, label: "apps.cleaner" },
   ...DOCK_APPS,
 ];
 
 export const APP_REGISTRY = {
-  cleaner: { title: "Cleaner", component: Cleaner },
-  profile: { title: "Profile", component: Profile },
-  experience: { title: "Experience", component: Experience },
-  projects: { title: "Projects", component: Projects },
-  contact: { title: "Contact", component: Contact },
-  settings: { title: "Settings", component: Settings },
+  cleaner: { title: "apps.cleaner", component: Cleaner },
+  profile: { title: "apps.profile", component: Profile },
+  experience: { title: "apps.experience", component: Experience },
+  projects: { title: "apps.projects", component: Projects },
+  contact: { title: "apps.contact", component: Contact },
+  settings: { title: "apps.settings", component: Settings },
 } as const;
 
 const wallpaper = "/wallpapers";
@@ -45,4 +45,9 @@ export const WALLPAPERS = [
   wallpaper + "/wallpaper4.png",
   wallpaper + "/wallpaper5.png",
   wallpaper + "/wallpaper6.png",
+] as const;
+
+export const languages = [
+  { code: "en", label: "languages.english" },
+  { code: "es", label: "languages.spanish" },
 ] as const;

@@ -1,4 +1,16 @@
 {
+    "languages": {
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "apps": {
+        "cleaner": "Cleaner",
+        "profile": "Profile",
+        "experience": "Experience",
+        "projects": "Projects",
+        "contact": "Contact",
+        "settings": "Settings"
+    },
     "pages": {
         "profile": {
             "title": "Hello, I am Ruben",

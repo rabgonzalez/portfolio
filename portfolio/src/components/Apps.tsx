@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import type { DockApp } from "../types";
 import AppIcon from "./AppIcon";
 
 export default function Apps({ apps }: { apps: DockApp[] }) {
+  const { t } = useTranslation();
+
   return (
     <nav className="fixed top-4 left-4 pointer-events-none">
       <ul
@@ -16,7 +19,7 @@ export default function Apps({ apps }: { apps: DockApp[] }) {
             key={app.appId}
             appId={app.appId}
             icon={app.icon}
-            label={app.label}
+            label={t(app.label)}
           />
         ))}
       </ul>

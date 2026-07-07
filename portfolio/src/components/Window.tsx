@@ -3,6 +3,7 @@ import type { WindowInstance } from '../types'
 import { APP_REGISTRY } from '../utils'
 import { useDraggable } from '../hooks/useDraggable'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const WINDOW_WIDTH = 600
 
@@ -11,6 +12,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
     const { id, appId, max, zIndex, x, y } = instance
     const { title, component: Content } = APP_REGISTRY[appId]
     const windowRef = useRef<HTMLDivElement>(null)
+    const { t } = useTranslation()
 
     const { handlePointerDown } = useDraggable((newX, newY) => moveWindow(id, newX, newY))
 
@@ -55,7 +57,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                     <button className="w-3 h-3 rounded-full bg-yellow-500" onClick={() => toggleMax(id)} />
                     <button className="w-3 h-3 rounded-full bg-green-500" onClick={() => closeWindow(id)} />
                 </div>
-                <span className="ml-2 text-sm text-white/80 font-medium" style={{ fontWeight: 900 }}>{title}</span>
+                <span className="ml-2 text-sm text-white/80 font-medium" style={{ fontWeight: 900 }}>{t(title)}</span>
             </div>
             <div className="window-content p-6 text-white overflow-auto" style={max ? { maxHeight: 'calc(100% - 40px)' } : {}}>
                 <Content windowId={id} />

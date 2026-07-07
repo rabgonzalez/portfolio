@@ -1,7 +1,7 @@
 import { BrushCleaning } from 'lucide-react'
 import { useWindows } from '../context/WindowContext'
 
-export default function Trash({ windowId }: { windowId: string }) {
+export default function Cleaner({ windowId }: { windowId: string }) {
     const { clearWindows, closeWindow } = useWindows()
 
     return (

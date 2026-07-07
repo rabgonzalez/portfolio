@@ -5,6 +5,7 @@ import { APPS, DOCK_APPS } from './utils'
 import Apps from './components/Apps'
 import { SettingsProvider } from './context/SettingsContext'
 import Background from './components/Background'
+import './i18n'
 
 function App() {
   return (

@@ -1,9 +1,9 @@
 import {
   Briefcase,
+  BrushCleaning,
   Folder,
   Mail,
   Settings as SettingsIcon,
-  Trash2,
   UserRound,
 } from "lucide-react";
 import Profile from "./pages/Profile";
@@ -12,7 +12,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Settings from "./pages/Settings";
 import type { DockApp } from "./types";
-import Trash from "./pages/Trash";
+import Cleaner from "./pages/Cleaner";
 
 export const DOCK_APPS: DockApp[] = [
   { appId: "profile", icon: UserRound, label: "Profile" },
@@ -23,12 +23,12 @@ export const DOCK_APPS: DockApp[] = [
 ];
 
 export const APPS: DockApp[] = [
-  { appId: "trash", icon: Trash2, label: "Trash" },
+  { appId: "cleaner", icon: BrushCleaning, label: "Cleaner" },
   ...DOCK_APPS,
 ];
 
 export const APP_REGISTRY = {
-  trash: { title: "Trash", component: Trash },
+  cleaner: { title: "Cleaner", component: Cleaner },
   profile: { title: "Profile", component: Profile },
   experience: { title: "Experience", component: Experience },
   projects: { title: "Projects", component: Projects },

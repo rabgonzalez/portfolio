@@ -10,7 +10,6 @@ export default function WindowsContainer() {
         if (hasInitialized.current) return
         openWindow("profile")
         hasInitialized.current = true
-
     }, [])
 
     return (

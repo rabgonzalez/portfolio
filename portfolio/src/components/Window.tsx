@@ -5,7 +5,7 @@ import { useDraggable } from '../hooks/useDraggable'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const WINDOW_WIDTH = 600
+const WINDOW_WIDTH = 800
 
 export default function Window({ instance }: { instance: WindowInstance }) {
     const { closeWindow, toggleMax, focusWindow, moveWindow } = useWindows()
@@ -45,8 +45,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                     ? { zIndex, top: '1rem', left: '1rem', right: '1rem', bottom: '6rem' }
                     : { zIndex, top: y, left: x }
             }
-            className={`window fixed bg-white/20 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : 'w-[600px]'
-                }`}
+            className={`window fixed bg-white/20 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : `w-[${WINDOW_WIDTH}px]`}`}
         >
             <div
                 onPointerDown={dragWindow}

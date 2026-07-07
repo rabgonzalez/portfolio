@@ -8,16 +8,30 @@ export default function Profile() {
     });
 
     return (
-        <div className="flex flex-row items-center justify-center">
-            <div>
-                <h1 className="text-2xl" style={{ fontWeight: 900 }}>{t("pages.profile.title")}</h1>
-                <h2 className="text-xl font-medium">
-                    {titles}
-                    <span className="typewriter-cursor">|</span>
-                </h2>
-                <p className="text-sm">{t("pages.profile.description")}</p>
+        <div className="flex flex-row items-center gap-8 px-8 py-6">
+            <div className="flex flex-col gap-3">
+                <h1 className="text-[28px] font-semibold tracking-tight text-neutral-900 dark:text-white">
+                    {t("pages.profile.title")}
+                </h1>
+
+                <div className="rounded-lg bg-[#1e1e1e] px-4 py-2.5 shadow-inner ring-1 ring-black/10 w-100">
+                    <h2 className="font-mono text-base text-white/90 h-6 flex items-center gap-2">
+                        <span className="text-white/40">$</span>
+                        {titles}
+                        <span className="typewriter-cursor text-white">▌</span>
+                    </h2>
+                </div>
+
+                <p className="text-sm leading-relaxed max-w-md">
+                    {t("pages.profile.description")}
+                </p>
             </div>
-            <img src="/profile.png" alt="Profile" className="bg-gray-200/20" style={{ width: "200px", height: "200px", borderRadius: "25%" }} />
+
+            <img
+                src="/profile.png"
+                alt="Profile"
+                className="w-[200px] h-[200px] rounded-full object-cover bg-gray-200/10 ring-1 ring-black/5"
+            />
         </div>
     )
 }

@@ -43,7 +43,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
             style={
                 max
                     ? { zIndex, top: '1rem', left: '1rem', right: '1rem', bottom: '6rem' }
-                    : { zIndex, top: y, left: x }
+                    : { zIndex, top: y, left: x, width: WINDOW_WIDTH }
             }
             className={`window fixed bg-white/20 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : `w-[${WINDOW_WIDTH}px]`}`}
         >

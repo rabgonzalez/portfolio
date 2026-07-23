@@ -8,7 +8,7 @@ export default function Settings() {
 
     return (
         <div>
-            <h3 className="text-lg font-semibold mb-2">Select Wallpaper</h3>
+            <h3 className="text-lg font-semibold mb-2">{t("pages.settings.selectWallpaper")}</h3>
             <div className="grid grid-cols-3 gap-3 p-4">
                 {WALLPAPERS.map(url => (
                     <button
@@ -21,7 +21,7 @@ export default function Settings() {
                     </button>
                 ))}
             </div>
-            <h3 className="text-lg font-semibold mb-2">Select Language</h3>
+            <h3 className="text-lg font-semibold mb-2">{t("pages.settings.selectLanguage")}</h3>
             <div className="grid grid-cols-3 gap-3 p-4">
                 <select value={language} onChange={(e) => setLanguage(e.target.value)}>
                     {languages.map((lang) => (

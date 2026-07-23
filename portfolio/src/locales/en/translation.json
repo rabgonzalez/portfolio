@@ -11,6 +11,28 @@
         "contact": "Contact",
         "settings": "Settings"
     },
+    "data": {
+        "projects": {
+            "routineFights": {
+                "description": "Mobile social network for routine management"
+            },
+            "moviesXMovies": {
+                "description": "Movie web application with Django and Vue"
+            },
+            "ticTacToeSpanish": {
+                "description": "Tic Tac Toe mobile application with Spring and React"
+            },
+            "lumino": {
+                "description": "Virtual campus with Django and documentation with Zensical"
+            },
+            "movieAPI": {
+                "description": "Movie API with Laravel and React"
+            },
+            "mcGuessTheBlock": {
+                "description": "Minecraft block guessing web game with Vue"
+            }
+        }
+    },
     "pages": {
         "profile": {
             "title": "Hello, I am Ruben",

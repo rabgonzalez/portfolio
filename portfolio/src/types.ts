@@ -22,3 +22,19 @@ export type WindowContextType = {
   clearWindows: () => void;
   moveWindow: (id: string, x: number, y: number) => void;
 };
+
+export type skillType = {
+  name: string;
+  description: string;
+  logo_url: string;
+  color: string;
+};
+
+export type ProjectType = {
+  id: number;
+  title: string;
+  description: string;
+  tags: skillType[];
+  codeUrl: string;
+  imageUrl?: string;
+};

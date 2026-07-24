@@ -3,44 +3,36 @@ import type { ProjectType, skillType } from "../types";
 export const skills: Record<string, skillType> = {
   Python: {
     name: "Python",
-    description: "Experiencia en desarrollo web con Django.",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     color: "#FFD43B",
   },
   Java: {
     name: "Java",
-    description:
-      "Desarrollo de aplicaciones con Spring Boot y aplicaciones móviles con Android.",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     color: "#007396",
   },
   TypeScript: {
     name: "TypeScript",
-    description:
-      "Desarrollo frontend con varios frameworks, y desarrollo backend con Node.js",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     color: "#3178C6",
   },
   PHP: {
     name: "PHP",
-    description: "Desarrollo de APIs RESTful con Laravel.",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     color: "#777BB4",
   },
   JavaScript: {
     name: "JavaScript",
-    description: "Desarrollo web frontend y backend con Node.js.",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     color: "#F7DF1E",
   },
   Lua: {
     name: "Lua",
-    description: "Creación de mods para videojuegos.",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg",
     color: "#000000",

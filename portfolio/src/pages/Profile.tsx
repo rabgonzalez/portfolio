@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useTypewriter } from "../hooks/useTypewriter";
+import { skills } from "../data/data";
 
 export default function Profile() {
     const { t } = useTranslation();
@@ -25,6 +26,20 @@ export default function Profile() {
                 <p className="text-sm leading-relaxed max-w-md">
                     {t("pages.profile.description")}
                 </p>
+
+                <h1 className="text-[20px]">Tech Stack</h1>
+                <div className="flex flex-wrap gap-2">
+                    {Object.values(skills).map((skill) => (
+                        <div
+                            key={skill.name}
+                            className="flex items-center gap-2 rounded-md border px-3 py-2 w-fit"
+                            style={{ backgroundColor: skill.color + "20", borderColor: skill.color }}
+                        >
+                            <img src={skill.logo_url} alt={skill.name} className="w-5 h-5" />
+                            <span className="text-sm font-medium">{skill.name}</span>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <img

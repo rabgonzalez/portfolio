@@ -25,7 +25,6 @@ export type WindowContextType = {
 
 export type skillType = {
   name: string;
-  description: string;
   logo_url: string;
   color: string;
 };

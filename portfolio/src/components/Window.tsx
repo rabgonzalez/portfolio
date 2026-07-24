@@ -45,7 +45,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                     ? { zIndex, top: '1rem', left: '1rem', right: '1rem', bottom: '6rem' }
                     : { zIndex, top: y, left: x, width: WINDOW_WIDTH }
             }
-            className={`window bg-black/70 backdrop-blur-xl fixed  rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : `w-[${WINDOW_WIDTH}px]`}`}
+            className={`window bg-white/40 dark:bg-black/70 backdrop-blur-xl fixed  rounded-xl shadow-2xl border border-white/20 dark:border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : `w-[${WINDOW_WIDTH}px]`}`}
         >
             <div
                 onPointerDown={dragWindow}
@@ -56,9 +56,9 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                     <button className="w-3 h-3 rounded-full bg-yellow-500" onClick={() => toggleMax(id)} />
                     <button className="w-3 h-3 rounded-full bg-green-500" onClick={() => closeWindow(id)} />
                 </div>
-                <span className="ml-2 text-sm text-white/80 font-medium" style={{ fontWeight: 900 }}>{t(title)}</span>
+                <span className="ml-2 text-sm text-black/80 dark:text-white/80 font-medium" style={{ fontWeight: 900 }}>{t(title)}</span>
             </div>
-            <div className="window-content p-6 text-white overflow-auto" style={max ? { maxHeight: 'calc(100% - 40px)' } : {}}>
+            <div className="window-content p-6 text-black/80 dark:text-white/80 overflow-auto" style={max ? { maxHeight: 'calc(100% - 40px)' } : {}}>
                 <Content windowId={id} />
             </div>
         </div>

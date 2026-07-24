@@ -5,12 +5,15 @@ import { languages } from '../utils'
 const DEFAULT_WALLPAPER = '/wallpapers/wallpaper.png'
 const WALLPAPER_KEY = 'wallpaper'
 const LANGUAGE_KEY = 'language'
+const THEME_KEY = 'theme'
 
 interface SettingsContextType {
   wallpaper: string
   setWallpaper: (url: string) => void
   language: string
   setLanguage: (lang: string) => void
+  theme: string
+  setTheme: (theme: string) => void
 }
 
 const SettingsContext = createContext<SettingsContextType | null>(null)
@@ -32,6 +35,17 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
 
   const [language, setLanguageState] = useState<string>(getWebLanguage())
 
+  const getPreferredScheme = () =>
+    typeof window !== 'undefined' && window.matchMedia?.('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  const [theme, setTheme] = useState<string>(localStorage.getItem(THEME_KEY) || getPreferredScheme());
+
+  useEffect(() => {
+    localStorage.setItem(THEME_KEY, theme);
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
+
   useEffect(() => {
     setLanguage(getWebLanguage())
   }, [])
@@ -48,7 +62,7 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <SettingsContext.Provider value={{ wallpaper, setWallpaper, language, setLanguage }}>
+    <SettingsContext.Provider value={{ wallpaper, setWallpaper, language, setLanguage, theme, setTheme }}>
       {children}
     </SettingsContext.Provider>
   )

@@ -11,6 +11,7 @@ export type WindowInstance = {
   zIndex: number;
   x: number;
   y: number;
+  focus: boolean;
 };
 
 export type WindowContextType = {

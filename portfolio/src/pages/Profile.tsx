@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useTypewriter } from "../hooks/useTypewriter";
 import { skills } from "../data/data";
+import StackComponent from "../components/StackComponent";
 
 export default function Profile() {
     const { t } = useTranslation();
@@ -16,10 +17,10 @@ export default function Profile() {
                 </h1>
 
                 <div className="rounded-lg bg-[#1e1e1e] px-4 py-2.5 shadow-inner ring-1 ring-black/10 w-100">
-                    <h2 className="font-mono text-base text-white/90 h-6 flex items-center gap-2">
-                        <span className="text-white/40">$</span>
+                    <h2 className="font-mono text-base text-green-400/90 h-6 flex items-center gap-2">
+                        <span className="text-green-400">$</span>
                         {titles}
-                        <span className="typewriter-cursor text-white">▌</span>
+                        <span className="typewriter-cursor text-green-400">▌</span>
                     </h2>
                 </div>
 
@@ -27,17 +28,10 @@ export default function Profile() {
                     {t("pages.profile.description")}
                 </p>
 
-                <h1 className="text-[20px]">Tech Stack</h1>
+                <h1 className="text-[20px] mt-4">{t("pages.profile.techStack")}</h1>
                 <div className="flex flex-wrap gap-2">
                     {Object.values(skills).map((skill) => (
-                        <div
-                            key={skill.name}
-                            className="flex items-center gap-2 rounded-md border px-3 py-2 w-fit"
-                            style={{ backgroundColor: skill.color + "20", borderColor: skill.color }}
-                        >
-                            <img src={skill.logo_url} alt={skill.name} className="w-5 h-5" />
-                            <span className="text-sm font-medium">{skill.name}</span>
-                        </div>
+                        <StackComponent key={skill.name} skill={skill} type="skill" />
                     ))}
                 </div>
             </div>

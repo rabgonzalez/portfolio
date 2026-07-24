@@ -9,7 +9,7 @@ const WINDOW_WIDTH = 800
 
 export default function Window({ instance }: { instance: WindowInstance }) {
     const { closeWindow, toggleMax, focusWindow, moveWindow } = useWindows()
-    const { id, appId, max, zIndex, x, y } = instance
+    const { id, appId, max, zIndex, x, y, focus } = instance
     const { title, component: Content } = APP_REGISTRY[appId]
     const windowRef = useRef<HTMLDivElement>(null)
     const { t } = useTranslation()
@@ -45,11 +45,11 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                     ? { zIndex, top: '1rem', left: '1rem', right: '1rem', bottom: '6rem' }
                     : { zIndex, top: y, left: x, width: WINDOW_WIDTH }
             }
-            className={`window fixed bg-white/20 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : `w-[${WINDOW_WIDTH}px]`}`}
+            className={`window bg-black/70 backdrop-blur-xl fixed  rounded-xl shadow-2xl border border-white/20 overflow-hidden transition-[width,height] duration-200 ${max ? '' : `w-[${WINDOW_WIDTH}px]`}`}
         >
             <div
                 onPointerDown={dragWindow}
-                className="window-titlebar flex items-center gap-2 px-4 py-2 bg-white/10 border-b border-white/20 cursor-move select-none"
+                className="window-titlebar flex items-center gap-2 px-4 py-2 bg-black/10 border-b border-white/20 cursor-move select-none"
             >
                 <div className="window-controls flex items-center gap-2">
                     <button className="w-3 h-3 rounded-full bg-red-500" onClick={() => closeWindow(id)} />

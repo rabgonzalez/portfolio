@@ -5,13 +5,13 @@ export const skills: Record<string, skillType> = {
     name: "Python",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    color: "#FFD43B",
+    color: "#3776AB", 
   },
   Java: {
     name: "Java",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    color: "#007396",
+    color: "#ED8B00", 
   },
   TypeScript: {
     name: "TypeScript",
@@ -23,19 +23,19 @@ export const skills: Record<string, skillType> = {
     name: "PHP",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    color: "#777BB4",
+    color: "#8892BF", 
   },
   JavaScript: {
     name: "JavaScript",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    color: "#F7DF1E",
+    color: "#F7DF1E", 
   },
   Lua: {
     name: "Lua",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg",
-    color: "#000000",
+    color: "#000080", 
   },
 };
 

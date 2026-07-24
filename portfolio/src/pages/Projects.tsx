@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { projects } from "../data/data";
+import StackComponent from "../components/StackComponent";
 
 export default function Home() {
     const { t } = useTranslation();
@@ -14,9 +15,9 @@ export default function Home() {
                         href={p.codeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex flex-col rounded-xl overflow-hidden border border-white/15 bg-white/5 backdrop-blur-xl shadow-lg hover:border-white/30 hover:-translate-y-1 transition-all duration-200"
+                        className="group flex flex-col rounded-xl overflow-hidden border border-white/15 bg-black/5 backdrop-blur-xl shadow-lg hover:border-white/30 hover:-translate-y-1 transition-all duration-200"
                     >
-                        <div className="aspect-video w-full overflow-hidden bg-white/10">
+                        <div className="aspect-video w-full overflow-hidden bg-black/10">
                             {p.imageUrl ? (
                                 <img
                                     src={p.imageUrl}
@@ -37,13 +38,7 @@ export default function Home() {
 
                             <div className="flex flex-wrap gap-1.5 mt-1">
                                 {p.tags.map((tag) => (
-                                    <span
-                                        key={tag.name}
-                                        style={{ backgroundColor: tag.color }}
-                                        className={`text-xs px-2 py-0.5 rounded-full border border-white/15 text-white/80`}
-                                    >
-                                        {tag.name}
-                                    </span>
+                                    <StackComponent key={tag.name} skill={tag} type="project" />
                                 ))}
                             </div>
                         </div>

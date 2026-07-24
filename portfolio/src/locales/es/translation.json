@@ -36,8 +36,9 @@
     "pages": {
         "profile": {
             "title": "Hola, soy Ruben",
-            "titles": ["Ingeniero de Software", "Desarrollador Full-Stack"],
-            "description": "Soy un ingeniero de software full-stack con experiencia en diversos lenguajes y marcos de trabajo. Siempre estoy ansioso por aprender nuevas tecnologías y nuevas formas de mejorar mis habilidades."
+                "titles": ["Ingeniero de Software", "Desarrollador Full-Stack"],
+                "description": "Soy un ingeniero de software full-stack con experiencia en diversos lenguajes y marcos de trabajo. Siempre estoy ansioso por aprender nuevas tecnologías y nuevas formas de mejorar mis habilidades.",
+                "techStack": "Stack Tecnológico"
         },
         "settings": {
             "selectLanguage": "Seleccionar Idioma",

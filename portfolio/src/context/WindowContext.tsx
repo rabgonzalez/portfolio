@@ -14,7 +14,7 @@ export function WindowProvider({ children }: { children: ReactNode }) {
             const offset = (prev.length % 15) * 30
             return [
                 ...prev,
-                { id, appId, show: true, max: false, zIndex: nextZ++, x: 100 + offset, y: 20 + offset },
+                { id, appId, show: true, max: false, zIndex: nextZ++, x: 100 + offset, y: 20 + offset, focus: true },
             ]
         })
     }
@@ -26,7 +26,7 @@ export function WindowProvider({ children }: { children: ReactNode }) {
         setWindows(prev => prev.map(w => (w.id === id ? { ...w, max: !w.max } : w)))
 
     const focusWindow = (id: string) =>
-        setWindows(prev => prev.map(w => (w.id === id ? { ...w, zIndex: nextZ++ } : w)))
+        setWindows(prev => prev.map(w => (w.id === id ? { ...w, zIndex: nextZ++, focus: true } : { ...w, focus: false })))
 
     const clearWindows = () => setWindows([])
 

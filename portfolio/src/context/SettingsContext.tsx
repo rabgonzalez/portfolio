@@ -20,7 +20,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
     () => localStorage.getItem(WALLPAPER_KEY) || DEFAULT_WALLPAPER
   )
 
-
   const getWebLanguage = useCallback(() => {
     const lang = localStorage.getItem(LANGUAGE_KEY)
     if (lang) return lang
@@ -32,7 +31,6 @@ export function SettingsProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const [language, setLanguageState] = useState<string>(getWebLanguage())
-
 
   useEffect(() => {
     setLanguage(getWebLanguage())

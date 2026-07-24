@@ -8,7 +8,7 @@ export default function DockIcon({ appId, icon: Icon, label }: DockApp) {
     <li className="group relative">
       <button
         onClick={() => openWindow(appId)}
-        className="flex items-center justify-center w-14 h-14 rounded-xl bg-white/10 hover:bg-white/30 hover:scale-110 transition-all duration-200"
+        className="flex items-center justify-center w-14 h-14 rounded-xl bg-black/10 hover:bg-black/30 hover:scale-110 transition-all duration-200"
       >
         <Icon size={26} strokeWidth={1.8} className="text-white" />
       </button>

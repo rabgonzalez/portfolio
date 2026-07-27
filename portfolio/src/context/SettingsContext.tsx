@@ -1,8 +1,8 @@
 import { createContext, useContext, useState, useCallback, type ReactNode, useEffect } from 'react'
 import i18n from '../i18n'
 import { languages } from '../utils'
+import DEFAULT_WALLPAPER from '../assets/wallpapers/wallpaper.png'
 
-const DEFAULT_WALLPAPER = '/wallpapers/wallpaper.png'
 const WALLPAPER_KEY = 'wallpaper'
 const LANGUAGE_KEY = 'language'
 const THEME_KEY = 'theme'

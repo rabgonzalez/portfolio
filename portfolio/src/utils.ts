@@ -13,6 +13,12 @@ import Contact from "./pages/Contact";
 import Settings from "./pages/Settings";
 import type { DockApp } from "./types";
 import Cleaner from "./pages/Cleaner";
+import wallpaper1 from "./assets/wallpapers/wallpaper.png";
+import wallpaper2 from "./assets/wallpapers/wallpaper2.png";
+import wallpaper3 from "./assets/wallpapers/wallpaper3.png";
+import wallpaper4 from "./assets/wallpapers/wallpaper4.png";
+import wallpaper5 from "./assets/wallpapers/wallpaper5.png";
+import wallpaper6 from "./assets/wallpapers/wallpaper6.png";
 
 export const DOCK_APPS: DockApp[] = [
   { appId: "profile", icon: UserRound, label: "apps.profile" },
@@ -36,15 +42,13 @@ export const APP_REGISTRY = {
   settings: { title: "apps.settings", component: Settings },
 } as const;
 
-const wallpaper = "/wallpapers";
-
 export const WALLPAPERS = [
-  wallpaper + "/wallpaper.png",
-  wallpaper + "/wallpaper2.png",
-  wallpaper + "/wallpaper3.png",
-  wallpaper + "/wallpaper4.png",
-  wallpaper + "/wallpaper5.png",
-  wallpaper + "/wallpaper6.png",
+  wallpaper1,
+  wallpaper2,
+  wallpaper3,
+  wallpaper4,
+  wallpaper5,
+  wallpaper6,
 ] as const;
 
 export const languages = [

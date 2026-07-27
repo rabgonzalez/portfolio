@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useTypewriter } from "../hooks/useTypewriter";
 import { skills } from "../data/data";
 import StackComponent from "../components/StackComponent";
+import profileImage from "../assets/profile.png";
 
 export default function Profile() {
     const { t } = useTranslation();
@@ -37,7 +38,7 @@ export default function Profile() {
             </div>
 
             <img
-                src="/profile.png"
+                src={profileImage}
                 alt="Profile"
                 className="w-[200px] h-[200px] rounded-full object-cover bg-gray-200/10 ring-1 ring-black/5"
             />

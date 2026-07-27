@@ -42,7 +42,14 @@
         },
         "settings": {
             "selectLanguage": "Seleccionar Idioma",
-            "selectWallpaper": "Seleccionar Fondo de Pantalla"
+            "selectWallpaper": "Seleccionar Fondo de Pantalla",
+            "selectTheme": "Seleccionar Tema"
+        },
+        "cleaner": {
+            "title": "Limpiar todas las ventanas",
+            "description": "Todas las ventanas abiertas se cerrarán inmediatamente",
+            "clearButton": "Limpiar Ventanas",
+            "cancelButton": "Cancelar"
         }
     }
 }

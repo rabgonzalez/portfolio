@@ -1,8 +1,10 @@
 import { BrushCleaning } from 'lucide-react'
 import { useWindows } from '../context/WindowContext'
+import { useTranslation } from 'react-i18next'
 
 export default function Cleaner({ windowId }: { windowId: string }) {
     const { clearWindows, closeWindow } = useWindows()
+    const { t } = useTranslation()
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-full px-8 py-6 text-center gap-1">
@@ -11,10 +13,10 @@ export default function Cleaner({ windowId }: { windowId: string }) {
             </div>
 
             <h1 className="text-[30px] font-semibold dark:text-white">
-                Clear all windows
+                {t('pages.cleaner.title')}
             </h1>
             <p className="text-[15px] text-black/60 dark:text-white/60 max-w-[280px] mb-5">
-                All open windows will be closed immediately.
+                {t('pages.cleaner.description')}
             </p>
 
             <div className="flex flex-col w-full max-w-[220px] gap-2">
@@ -23,13 +25,13 @@ export default function Cleaner({ windowId }: { windowId: string }) {
                     className="w-full py-1.5 rounded-md bg-red-500 hover:bg-red-600 dark:text-white text-[13px] font-medium transition-colors"
                     onClick={clearWindows}
                 >
-                    Clear Windows
+                    {t('pages.cleaner.clearButton')}
                 </button>
                 <button
                     className="w-full py-1.5 rounded-md bg-blue-500 hover:bg-blue-600 dark:text-white text-[13px] font-medium transition-colors"
                     onClick={() => closeWindow(windowId)}
                 >
-                    Cancel
+                    {t('pages.cleaner.cancelButton')}
                 </button>
             </div>
         </div>

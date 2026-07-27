@@ -42,7 +42,14 @@
         },
         "settings": {
             "selectLanguage": "Select Language",
-            "selectWallpaper": "Select Wallpaper"
+            "selectWallpaper": "Select Wallpaper",
+            "selectTheme": "Select Theme"
+        },
+        "cleaner": {
+            "title": "Clear all windows",
+            "description": "All open windows will be closed inmediately",
+            "clearButton": "Clear Windows",
+            "cancelButton": "Cancel"
         }
     }
 }

@@ -9,7 +9,7 @@ const WINDOW_WIDTH = 800
 
 export default function Window({ instance }: { instance: WindowInstance }) {
     const { closeWindow, toggleMax, focusWindow, moveWindow } = useWindows()
-    const { id, appId, max, zIndex, x, y, focus } = instance
+    const { id, appId, max, zIndex, x, y } = instance
     const { title, component: Content } = APP_REGISTRY[appId]
     const windowRef = useRef<HTMLDivElement>(null)
     const { t } = useTranslation()

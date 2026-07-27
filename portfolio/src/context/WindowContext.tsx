@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, type ReactNode } from 'react'
 import type { WindowContextType, WindowInstance, AppId } from '../types'
 
 const WindowContext = createContext<WindowContextType | null>(null)

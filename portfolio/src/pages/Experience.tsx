@@ -1,8 +1,12 @@
-export default function Home() {
+import { ConstructionIcon } from "lucide-react"
+
+export default function Experience() {
     return (
-        <div className="home">
-            <h1>Welcome to my portfolio!</h1>
-            <p>I'm a software developer with experience in web development, mobile app development, and more.</p>
+        <div className="flex flex-col items-center justify-center w-full h-full gap-3">
+            <div className="flex items-center justify-center w-14 h-14 rounded-full bg-black dark:bg-white mb-3">
+                <ConstructionIcon className="mx-auto my-4 text-white/70 dark:text-black/70" size={48} />
+            </div>
+            <h1 className="text-2xl font-bold text-center">Under Construction</h1>
         </div>
     )
 }

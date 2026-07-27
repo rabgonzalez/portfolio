@@ -4,6 +4,7 @@ import { APP_REGISTRY } from '../utils'
 import { useDraggable } from '../hooks/useDraggable'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const WINDOW_WIDTH = 800
 
@@ -13,6 +14,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
     const { title, component: Content } = APP_REGISTRY[appId]
     const windowRef = useRef<HTMLDivElement>(null)
     const { t } = useTranslation()
+    const isMobile = useIsMobile()
 
     const { handlePointerDown } = useDraggable((newX, newY) => moveWindow(id, newX, newY))
 
@@ -53,9 +55,11 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                 className="window-titlebar flex items-center gap-2 px-4 py-2 bg-black/10 border-b border-white/20 cursor-move select-none"
             >
                 <div className="window-controls flex items-center gap-2">
-                    <button className="w-3 h-3 rounded-full bg-red-500" onClick={() => closeWindow(id)} />
-                    <button className="w-3 h-3 rounded-full bg-yellow-500" onClick={() => toggleMax(id)} />
-                    <button className="w-3 h-3 rounded-full bg-green-500" onClick={() => closeWindow(id)} />
+                    <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full bg-red-500`} onClick={() => closeWindow(id)} />
+                    {!isMobile && (
+                        <button className="w-3 h-3 rounded-full bg-yellow-500" onClick={() => toggleMax(id)} />
+                    )}
+                    <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full bg-green-500`} onClick={() => closeWindow(id)} />
                 </div>
                 <span className="ml-2 text-sm text-black/80 dark:text-white/80 font-medium" style={{ fontWeight: 900 }}>{t(title)}</span>
             </div>

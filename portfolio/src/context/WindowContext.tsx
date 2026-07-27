@@ -14,10 +14,13 @@ export function WindowProvider({ children }: { children: ReactNode }) {
         const id = crypto.randomUUID()
         setWindows(prev => {
             const offset = (prev.length % 15) * 30
-            return [
-                ...prev,
-                { id, appId, show: true, max: isMobile, zIndex: nextZ++, x: 100 + offset, y: 20 + offset, focus: true },
-            ]
+            return isMobile ?
+                [{ id, appId, show: true, max: true, zIndex: nextZ++, x: 100 + offset, y: 20 + offset, focus: true }]
+                :
+                [
+                    ...prev,
+                    { id, appId, show: true, max: false, zIndex: nextZ++, x: 100 + offset, y: 20 + offset, focus: true },
+                ]
         })
     }
 

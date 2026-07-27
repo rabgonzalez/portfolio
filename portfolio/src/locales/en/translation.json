@@ -36,7 +36,7 @@
     "pages": {
         "profile": {
             "title": "Hello, I am Ruben",
-            "titles": ["Ingeniero de Software", "Desarrollador Full-Stack"],
+            "titles": ["Software Engineer", "Full-Stack Developer"],
             "description": "I'm a full-stack software engineer with experience in various programming languages and frameworks. I am always eager to learn new technologies and new ways of imrpoving my skills.",
             "techStack": "Tech Stack"
         },

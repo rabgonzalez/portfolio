@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { projects } from "../data/data";
 import ProjectComponent from "../components/ProjectComponent";
 
-export default function Home() {
+export default function Projects() {
     const { t } = useTranslation();
 
     return (

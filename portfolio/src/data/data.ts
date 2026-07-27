@@ -1,4 +1,8 @@
 import type { ProjectType, skillType } from "../types";
+import RoutineFightsImage from "../assets/projects/routine-fights.png";
+import MoviesXMoviesImage from "../assets/projects/moviesxmovies.webp";
+import MovieAPIImage from "../assets/projects/movie-api.png";
+import GuessTheBlockImage from "../assets/projects/guess-the-block.png";
 
 export const skills: Record<string, skillType> = {
   Python: {
@@ -46,7 +50,7 @@ export const projects: ProjectType[] = [
     description: "data.projects.routineFights.description",
     tags: [skills["Python"], skills["TypeScript"]],
     codeUrl: "https://github.com/rabgonzalez/Routine-Fights",
-    imageUrl: "/projects/routine-fights.png",
+    imageUrl: RoutineFightsImage,
   },
   {
     id: 2,
@@ -54,7 +58,7 @@ export const projects: ProjectType[] = [
     description: "data.projects.moviesXMovies.description",
     tags: [skills["Python"], skills["TypeScript"]],
     codeUrl: "https://moviesxmovies.jonaykb.com/docs/",
-    imageUrl: "/projects/moviesxmovies.webp",
+    imageUrl: MoviesXMoviesImage,
   },
   {
     id: 3,
@@ -76,7 +80,7 @@ export const projects: ProjectType[] = [
     description: "data.projects.movieAPI.description",
     tags: [skills["PHP"], skills["TypeScript"]],
     codeUrl: "https://github.com/rabgonzalez/MovieAPI",
-    imageUrl: "/projects/movie-api.png",
+    imageUrl: MovieAPIImage,
   },
   {
     id: 6,
@@ -84,6 +88,6 @@ export const projects: ProjectType[] = [
     description: "data.projects.mcGuessTheBlock.description",
     tags: [skills["TypeScript"]],
     codeUrl: "https://github.com/rabgonzalez/MC-GuessTheBlock",
-    imageUrl: "/projects/guess-the-block.png",
+    imageUrl: GuessTheBlockImage,
   },
 ];

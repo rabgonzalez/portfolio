@@ -49,6 +49,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
         >
             <div
                 onPointerDown={dragWindow}
+                style={{ touchAction: 'none' }}
                 className="window-titlebar flex items-center gap-2 px-4 py-2 bg-black/10 border-b border-white/20 cursor-move select-none"
             >
                 <div className="window-controls flex items-center gap-2">

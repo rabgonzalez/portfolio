@@ -24,6 +24,7 @@ export function useDraggable(onMove: (x: number, y: number) => void) {
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent, currentX: number, currentY: number) => {
+      e.preventDefault();
       // If click comes from window controls, don't start dragging
       if ((e.target as HTMLElement).closest(".window-controls")) return;
 

@@ -11,14 +11,14 @@ export default function Profile() {
     });
 
     return (
-        <div className="flex flex-row items-center gap-8 px-8 py-6">
-            <div className="flex flex-col gap-3">
-                <h1 className="text-[28px] font-semibold tracking-tight text-neutral-900 dark:text-white">
+        <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 px-4 sm:px-8 py-6">
+            <div className="flex flex-col gap-3 w-full">
+                <h1 className="text-[24px] sm:text-[28px] font-semibold tracking-tight text-neutral-900 dark:text-white">
                     {t("pages.profile.title")}
                 </h1>
 
-                <div className="rounded-lg bg-[#1e1e1e] px-4 py-2.5 shadow-inner ring-1 ring-black/10 w-100">
-                    <h2 className="font-mono text-base text-green-400/90 h-6 flex items-center gap-2">
+                <div className="rounded-lg bg-[#1e1e1e] px-4 py-2.5 shadow-inner ring-1 ring-black/10 w-full sm:w-100">
+                    <h2 className="font-mono text-sm sm:text-base text-green-400/90 h-6 flex items-center gap-2">
                         <span className="text-green-400">$</span>
                         {titles}
                         <span className="typewriter-cursor text-green-400">▌</span>
@@ -40,7 +40,7 @@ export default function Profile() {
             <img
                 src={profileImage}
                 alt="Profile"
-                className="w-[200px] h-[200px] rounded-full object-cover bg-gray-200/10 ring-1 ring-black/5"
+                className="w-[140px] h-[140px] sm:w-[200px] sm:h-[200px] shrink-0 rounded-full object-cover bg-gray-200/10 ring-1 ring-black/5"
             />
         </div>
     )

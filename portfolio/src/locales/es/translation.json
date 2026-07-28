@@ -32,6 +32,28 @@
             "movieAPI": {
                 "description": "API de películas"
             }
+        },
+        "experience": {
+            "DAM": {
+                "title": "Desarrollador Multiplataforma",
+                "company": "IES Telesforo Bravo",
+                "description": "Estudié un ciclo superior de desarrollo de aplicaciones multiplataforma, donde aprendí las bases de la programación en múltiples plataformas."
+            },
+            "DAW": {
+                "title": "Desarrollador Web",
+                "company": "IES Telesforo Bravo",
+                "description": "Estudié un ciclo superior de desarrollo de aplicaciones web, donde amplié mis conocimientos en el entorno de desarrollo web."
+            },
+            "ERRC": {
+                "title": "Desarrollador Frontend",
+                "company": "Emergency Response Rescue Corps",
+                "description": "Realice las prácticas de mi ciclo superior en esta empresa, donde desarrollé un proyecto web para la gestión de emergencias y rescates."
+            },
+            "DST": {
+                "title": "Desarrollador Full-Stack",
+                "company": "DST Factory",
+                "description": "Reforzé mis conocimientos en el desarrollo web realizando las prácticas de desarrollo web en este empresa, trabajando en proyectos reales y colaborando con un equipo de desarrolladores."
+            }
         }
     },
     "pages": {

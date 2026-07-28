@@ -37,22 +37,21 @@
             "DAM": {
                 "title": "Cross-Platform Developer",
                 "company": "IES Telesforo Bravo",
-                "description": ""
+                "description": "Studied a higher-level cycle in cross-platform application development, where I learned the basics of programming on multiple platforms."
             },
             "DAW": {
                 "title": "Web Developer",
                 "company": "IES Telesforo Bravo",
-                "description": ""
+                "description": "Studied a higher-level cycle in web application development, where I expanded my knowledge of the web development environment."
             },
             "ERRC": {
                 "title": "Frontend Developer",
                 "company": "Emergency Response Rescue Corps",
-                "description": ""
-            },
+                "description": "I completed my higher-level cycle internship at this company, where I developed a web project for emergency and rescue management."},
             "DST": {
                 "title": "Full-Stack Developer",
                 "company": "DST Factory",
-                "description": ""
+                "description": "Reinforced my knowledge in web development by doing web development internships at this company, working on real projects and collaborating with a team of developers."
             }
         }
     },

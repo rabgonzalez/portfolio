@@ -141,3 +141,14 @@ export const experiences: ExperienceType[] = [
     icon: DSTImage,
   }
 ]
+
+export function formatRange(start: string, end: string, locale: string) {
+    const format = (d: string) => {
+        const [y, m] = d.split("-").map(Number);
+        return new Intl.DateTimeFormat(locale, {
+            month: "short",
+            year: "numeric",
+        }).format(new Date(y, m - 1));
+    };
+    return `${format(start)} — ${format(end)}`;
+}

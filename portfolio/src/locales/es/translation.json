@@ -17,28 +17,29 @@
                 "description": "Red social móvil de gestión de rutinas"
             },
             "moviesXMovies": {
-                "description": "Aplicación web de películas con Django y Vue"
+                "description": "Recomendador de películas inteligente"
             },
             "ticTacToeSpanish": {
-                "description": "Aplicación móvil de Tres en raya con Spring y React"
+                "description": "Aplicación móvil de Tres en Raya multijugador"
+            },
+
+            "mcGuessTheBlock": {
+                "description": "Juego web de adivinar el bloque de Minecraft"
             },
             "lumino": {
-                "description": "Campus virtual con Django y documentación con Zensical"
+                "description": "Campus virtual"
             },
             "movieAPI": {
-                "description": "API de películas con Laravel y React"
-            },
-            "mcGuessTheBlock": {
-                "description": "Juego web de adivinar el bloque de Minecraft con Vue"
+                "description": "API de películas"
             }
         }
     },
     "pages": {
         "profile": {
             "title": "Hola, soy Ruben",
-                "titles": ["Ingeniero de Software", "Desarrollador Full-Stack"],
-                "description": "Soy un ingeniero de software full-stack con experiencia en diversos lenguajes y marcos de trabajo. Siempre estoy ansioso por aprender nuevas tecnologías y nuevas formas de mejorar mis habilidades.",
-                "techStack": "Stack Tecnológico"
+            "titles": ["Ingeniero de Software", "Desarrollador Full-Stack", "Escritor de Código"],
+            "description": "Soy un ingeniero de software full-stack con experiencia en diversos lenguajes y marcos de trabajo. Siempre estoy ansioso por aprender nuevas tecnologías y nuevas formas de mejorar mis habilidades.",
+            "techStack": "Stack Tecnológico"
         },
         "settings": {
             "selectLanguage": "Seleccionar Idioma",
@@ -50,6 +51,9 @@
             "description": "Todas las ventanas abiertas se cerrarán inmediatamente",
             "clearButton": "Limpiar Ventanas",
             "cancelButton": "Cancelar"
+        },
+        "projects": {
+            "description": "Aquí hay algunos de mis proyectos recientes. Haga clic en cada uno para obtener más información."
         }
     }
 }

@@ -17,26 +17,49 @@
                 "description": "Mobile social network for routine management"
             },
             "moviesXMovies": {
-                "description": "Movie web application with Django and Vue"
+                "description": "Intelligent movie recommendation app"
             },
             "ticTacToeSpanish": {
-                "description": "Tic Tac Toe mobile application with Spring and React"
+                "description": "Tic Tac Toe multiplayer mobile application"
+            },
+
+            "mcGuessTheBlock": {
+                "description": "Minecraft block guessing web game"
             },
             "lumino": {
-                "description": "Virtual campus with Django and documentation with Zensical"
+                "description": "Virtual campus"
             },
             "movieAPI": {
-                "description": "Movie API with Laravel and React"
+                "description": "Movie API"
+            }
+        },
+        "experience": {
+            "DAM": {
+                "title": "Cross-Platform Developer",
+                "company": "IES Telesforo Bravo",
+                "description": ""
             },
-            "mcGuessTheBlock": {
-                "description": "Minecraft block guessing web game with Vue"
+            "DAW": {
+                "title": "Web Developer",
+                "company": "IES Telesforo Bravo",
+                "description": ""
+            },
+            "ERRC": {
+                "title": "Frontend Developer",
+                "company": "Emergency Response Rescue Corps",
+                "description": ""
+            },
+            "DST": {
+                "title": "Full-Stack Developer",
+                "company": "DST Factory",
+                "description": ""
             }
         }
     },
     "pages": {
         "profile": {
             "title": "Hello, I am Ruben",
-            "titles": ["Software Engineer", "Full-Stack Developer"],
+            "titles": ["Software Engineer", "Full-Stack Developer", "Code Writer"],
             "description": "I'm a full-stack software engineer with experience in various programming languages and frameworks. I am always eager to learn new technologies and new ways of imrpoving my skills.",
             "techStack": "Tech Stack"
         },
@@ -50,6 +73,9 @@
             "description": "All open windows will be closed inmediately",
             "clearButton": "Clear Windows",
             "cancelButton": "Cancel"
+        },
+        "projects": {
+            "description": "Here are some of my recent projects. Click on each one to get more information."
         }
     }
 }

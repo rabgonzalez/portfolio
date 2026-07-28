@@ -38,3 +38,14 @@ export type ProjectType = {
   codeUrl: string;
   imageUrl?: string;
 };
+
+export type ExperienceType = {
+  id: number;
+  title: string;
+  company: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  tags: skillType[];
+  icon?: string;
+}

@@ -75,6 +75,15 @@
         },
         "projects": {
             "description": "Here are some of my recent projects. Click on each one to get more information."
+        },
+        "contact": {
+            "title": "My Contact",
+            "subtitle": "Get in touch with me",
+            "description": "If you want to get in touch with me, you can send me an email or check my social media profiles. I'm always open to new opportunities.",
+            "location": "Location: Spain/Remote",
+            "response": "Response: Less than 24 hours",
+            "emailCta": "Send email",
+            "curriculumCta": "Download curriculum"
         }
     }
 }

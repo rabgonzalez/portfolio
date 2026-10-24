@@ -57,9 +57,9 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                 <div className="window-controls flex items-center gap-2">
                     <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full bg-red-500`} onClick={() => closeWindow(id)} />
                     {!isMobile && (
-                        <button className="w-3 h-3 rounded-full bg-yellow-500" onClick={() => toggleMax(id)} />
+                        <button className="w-3 h-3 rounded-full bg-yellow-500" onClick={() => closeWindow(id)} />
                     )}
-                    <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full bg-green-500`} onClick={() => closeWindow(id)} />
+                    <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full bg-green-500`} onClick={() => toggleMax(id)} />
                 </div>
                 <span className="ml-2 text-sm text-black/80 dark:text-white/80 font-medium" style={{ fontWeight: 900 }}>{t(title)}</span>
             </div>

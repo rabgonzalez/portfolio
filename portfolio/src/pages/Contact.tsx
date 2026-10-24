@@ -1,5 +1,6 @@
-import { Mail, MapPin, Zap } from 'lucide-react';
+import { FileUser, Mail, MapPin, Zap } from 'lucide-react';
 import { useTranslation } from "react-i18next";
+import RubenAbreuGonzalezCV from "../assets/cv/RubenAbreuGonzalez-CV.pdf";
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ export default function Contact() {
 
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+              <h3 className="text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
                 {t("pages.contact.subtitle")}
               </h3>
               <p className="mt-4 text-[15px] leading-relaxed text-neutral-600 dark:text-white/60">
@@ -71,12 +72,12 @@ export default function Contact() {
                 </a>
               </div>
                <a
-               href=""
+               href={RubenAbreuGonzalezCV}
                 download
                 className="group flex items-center justify-center gap-2 rounded-xl bg-neutral-900 dark:bg-white py-3.5 px-6 text-[15px] font-medium text-white dark:text-black transition-colors duration-200 hover:bg-neutral-700 dark:hover:bg-neutral-200"
               >
-                <Mail size={16} strokeWidth={1.75} />
-                <span>{t("pages.contact.emailCta")}</span>
+                <FileUser size={16} strokeWidth={1.75} />
+                <span>{t("pages.contact.curriculumCta")}</span>
               </a>
             </div>
           </div>

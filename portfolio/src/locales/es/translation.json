@@ -76,6 +76,15 @@
         },
         "projects": {
             "description": "Aquí hay algunos de mis proyectos recientes. Haga clic en cada uno para obtener más información."
+        },
+        "contact": {
+            "title": "Mi contacto",
+            "subtitle": "Póngase en contacto conmigo",
+            "description": "Si desea ponerse en contacto conmigo, puede enviarme un correo electrónico o revisar mis perfiles de redes sociales. Siempre estoy abierto a nuevas oportunidades.",
+            "location": "Ubicación: España/Remoto",
+            "response": "Respuesta: Menos de 24 horas",
+            "emailCta": "Enviar correo electrónico",
+            "curriculumCta": "Descargar currículum"
         }
     }
 }

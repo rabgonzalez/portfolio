@@ -11,7 +11,7 @@ export default function ProjectComponent({ project }: { project: ProjectType }) 
             href={project.codeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col rounded-xl overflow-hidden border border-white/15 dark:border-black/15 bg-white/25 backdrop-blur-xl shadow-lg hover:border-white/30 hover:-translate-y-1 transition-all duration-200"
+            className="group flex flex-col rounded-xl overflow-hidden border border-white/15 dark:border-black/15 bg-white/25 shadow-lg hover:border-white/30 hover:-translate-y-1 transition-all duration-200"
         >
             <div className="aspect-video w-full overflow-hidden bg-white/50 dark:bg-black/25">
                 {project.imageUrl ? (

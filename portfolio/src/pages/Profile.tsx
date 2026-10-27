@@ -15,7 +15,7 @@ export default function Profile() {
     <section className="mac-page">
       <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">
         <div className="min-w-0">
-          <span className="mac-eyebrow">Portfolio</span>
+          <span className="mac-eyebrow">{t("pages.profile.eyebrow")}</span>
           <h1 className="mt-1 text-[30px] font-semibold tracking-[-0.04em] text-black/90 dark:text-white sm:text-[38px]">
             {t("pages.profile.title")}
           </h1>
@@ -43,7 +43,7 @@ export default function Profile() {
       <div className="mt-10">
         <div className="mb-4 flex items-end justify-between gap-4">
           <div>
-            <span className="mac-eyebrow">Toolkit</span>
+            <span className="mac-eyebrow">{t("pages.profile.toolkitEyebrow")}</span>
             <h2 className="mt-1 text-lg font-semibold tracking-tight text-black/85 dark:text-white/90">
               {t("pages.profile.techStack")}
             </h2>

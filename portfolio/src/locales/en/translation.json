@@ -22,7 +22,6 @@
             "ticTacToeSpanish": {
                 "description": "Tic Tac Toe multiplayer mobile application"
             },
-
             "mcGuessTheBlock": {
                 "description": "Minecraft block guessing web game"
             },
@@ -47,25 +46,39 @@
             "ERRC": {
                 "title": "Frontend Developer",
                 "company": "Emergency Response Rescue Corps",
-                "description": "I completed my higher-level cycle internship at this company, where I developed a web project for emergency and rescue management."},
+                "description": "I completed my higher-level cycle internship at this company, where I developed a web project for emergency and rescue management."
+            },
             "DST": {
                 "title": "Full-Stack Developer",
                 "company": "DST Factory",
                 "description": "Reinforced my knowledge in web development by doing web development internships at this company, working on real projects and collaborating with a team of developers."
+            },
+            "types": {
+                "study": "Studies",
+                "internship": "Internship"
             }
         }
     },
     "pages": {
         "profile": {
             "title": "Hello, I am Ruben",
-            "titles": ["Software Engineer", "Full-Stack Developer", "Code Writer"],
-            "description": "I'm a full-stack software engineer with experience in various programming languages and frameworks. I am always eager to learn new technologies and new ways of imrpoving my skills.",
-            "techStack": "Tech Stack"
+            "titles": [
+                "Software Engineer",
+                "Full-Stack Developer",
+                "Code Writer"
+            ],
+            "description": "I'm a full-stack software engineer with experience in various programming languages and frameworks. I enjoy learning new technologies and new ways of imrpoving my skills.",
+            "techStack": "Tech Stack",
+            "eyebrow": "Portfolio",
+            "toolkitEyebrow": "Toolkit"
         },
         "settings": {
             "selectLanguage": "Select Language",
             "selectWallpaper": "Select Wallpaper",
-            "selectTheme": "Select Theme"
+            "selectTheme": "Select Theme",
+            "eyebrow": "Preferences",
+            "languageDescription": "Choose the language used throughout the portfolio.",
+            "themeDescription": "Use the appearance that feels best on your device."
         },
         "cleaner": {
             "title": "Clear all windows",
@@ -74,7 +87,8 @@
             "cancelButton": "Cancel"
         },
         "projects": {
-            "description": "Here are some of my recent projects. Click on each one to get more information."
+            "description": "Here are some of my recent projects. Click on each one to get more information.",
+            "eyebrow": "Selected work"
         },
         "contact": {
             "title": "My Contact",
@@ -83,7 +97,11 @@
             "location": "Location: Spain/Remote",
             "response": "Response: Less than 24 hours",
             "emailCta": "Send email",
-            "curriculumCta": "Download curriculum"
+            "curriculumCta": "Download curriculum",
+            "eyebrow": "Get in touch"
+        },
+        "experience": {
+            "eyebrow": "Career"
         }
     }
 }

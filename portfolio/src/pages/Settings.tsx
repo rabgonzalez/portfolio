@@ -11,7 +11,7 @@ export default function Settings() {
   return (
     <section className="mac-page">
       <div className="mac-page-heading">
-        <span className="mac-eyebrow">Preferences</span>
+        <span className="mac-eyebrow">{t("pages.settings.eyebrow")}</span>
         <h1>{t("apps.settings")}</h1>
       </div>
 
@@ -47,7 +47,7 @@ export default function Settings() {
         <div className="mac-settings-row">
           <div>
             <h3 className="mac-section-title">{t("pages.settings.selectLanguage")}</h3>
-            <p className="mac-setting-caption">Choose the language used throughout the portfolio.</p>
+            <p className="mac-setting-caption">{t("pages.settings.languageDescription")}</p>
           </div>
           <select className="mac-select" value={language} onChange={(e) => setLanguage(e.target.value)}>
             {languages.map((lang) => (
@@ -59,7 +59,7 @@ export default function Settings() {
         <div className="mac-settings-row">
           <div>
             <h3 className="mac-section-title">{t("pages.settings.selectTheme")}</h3>
-            <p className="mac-setting-caption">Use the appearance that feels best on your device.</p>
+            <p className="mac-setting-caption">{t("pages.settings.themeDescription")}</p>
           </div>
           <div className="flex items-center gap-2.5">
             <Sun size={15} className="text-black/45 dark:text-white/45" />

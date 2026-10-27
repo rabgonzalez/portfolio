@@ -159,6 +159,12 @@ button, a { user-select: none; }
 .dark .mac-project-card:hover .mac-arrow { background: rgba(255,255,255,.10); }
 .mac-company-icon { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; border: 1px solid rgba(255,255,255,.65); background: rgba(255,255,255,.56); box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 2px 7px rgba(0,0,0,.05); }
 .dark .mac-company-icon { border-color: rgba(255,255,255,.10); background: rgba(255,255,255,.08); box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
+.mac-experience-type-pill { white-space: nowrap; border: 1px solid rgba(0,0,0,.08); border-radius: 999px; padding: 5px 9px; background: rgba(0,0,0,.045); font-size: 10px; font-weight: 650; color: rgba(0,0,0,.50); }
+.mac-experience-type-pill.is-study { border-color: rgba(70,110,210,.18); background: rgba(70,110,210,.09); color: rgba(45,80,165,.78); }
+.mac-experience-type-pill.is-internship { border-color: rgba(45,145,95,.18); background: rgba(45,145,95,.09); color: rgba(35,115,75,.78); }
+.dark .mac-experience-type-pill { border-color: rgba(255,255,255,.08); background: rgba(255,255,255,.05); color: rgba(255,255,255,.50); }
+.dark .mac-experience-type-pill.is-study { border-color: rgba(120,155,255,.22); background: rgba(120,155,255,.11); color: rgba(165,185,255,.82); }
+.dark .mac-experience-type-pill.is-internship { border-color: rgba(90,190,135,.20); background: rgba(90,190,135,.10); color: rgba(135,220,170,.82); }
 .mac-date-pill { white-space: nowrap; border: 1px solid rgba(0,0,0,.06); border-radius: 999px; padding: 5px 9px; background: rgba(0,0,0,.035); font-size: 10px; font-weight: 600; color: rgba(0,0,0,.43); }
 .dark .mac-date-pill { border-color: rgba(255,255,255,.08); background: rgba(255,255,255,.05); color: rgba(255,255,255,.43); }
 .mac-tech-pill, .mac-skill-pill { display: inline-flex; align-items: center; gap: 7px; border: 1px solid; border-radius: 999px; font-size: 11px; font-weight: 550; color: rgba(0,0,0,.60); }

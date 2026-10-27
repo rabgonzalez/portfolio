@@ -46,6 +46,7 @@ export type ExperienceType = {
   description: string;
   startDate: string;
   endDate: string;
+  type: "study" | "internship";
   tags: skillType[];
   icon?: string;
 }

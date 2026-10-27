@@ -4,7 +4,7 @@ import { useIsMobile } from '../hooks/useIsMobile'
 
 const WindowContext = createContext<WindowContextType | null>(null)
 
-let nextZ = 1
+let nextZ = 20
 
 export function WindowProvider({ children }: { children: ReactNode }) {
     const [windows, setWindows] = useState<WindowInstance[]>([])

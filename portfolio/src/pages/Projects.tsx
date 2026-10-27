@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <section className="mac-page">
       <div className="mac-page-heading">
-        <span className="mac-eyebrow">Selected work</span>
+        <span className="mac-eyebrow">{t("pages.projects.eyebrow")}</span>
         <h1>{t("apps.projects")}</h1>
         <p>{t("pages.projects.description")}</p>
       </div>

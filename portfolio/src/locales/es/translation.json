@@ -22,7 +22,6 @@
             "ticTacToeSpanish": {
                 "description": "Aplicación móvil de Tres en Raya multijugador"
             },
-
             "mcGuessTheBlock": {
                 "description": "Juego web de adivinar el bloque de Minecraft"
             },
@@ -53,20 +52,33 @@
                 "title": "Desarrollador Full-Stack",
                 "company": "DST Factory",
                 "description": "Reforzé mis conocimientos en el desarrollo web realizando las prácticas de desarrollo web en este empresa, trabajando en proyectos reales y colaborando con un equipo de desarrolladores."
+            },
+            "types": {
+                "study": "Estudios",
+                "internship": "Prácticas"
             }
         }
     },
     "pages": {
         "profile": {
             "title": "Hola, soy Ruben",
-            "titles": ["Ingeniero de Software", "Desarrollador Full-Stack", "Escritor de Código"],
-            "description": "Soy un ingeniero de software full-stack con experiencia en diversos lenguajes y marcos de trabajo. Siempre estoy ansioso por aprender nuevas tecnologías y nuevas formas de mejorar mis habilidades.",
-            "techStack": "Stack Tecnológico"
+            "titles": [
+                "Ingeniero de Software",
+                "Desarrollador Full-Stack",
+                "Escritor de Código"
+            ],
+            "description": "Soy un ingeniero de software full-stack con experiencia en diversos lenguajes y marcos de trabajo. Me gusta aprender nuevas tecnologías y nuevas formas de mejorar mis habilidades.",
+            "techStack": "Stack Tecnológico",
+            "eyebrow": "Portafolio",
+            "toolkitEyebrow": "Tecnologías"
         },
         "settings": {
             "selectLanguage": "Seleccionar Idioma",
             "selectWallpaper": "Seleccionar Fondo de Pantalla",
-            "selectTheme": "Seleccionar Tema"
+            "selectTheme": "Seleccionar Tema",
+            "eyebrow": "Preferencias",
+            "languageDescription": "Elige el idioma utilizado en todo el portafolio.",
+            "themeDescription": "Usa el aspecto que mejor se adapte a tu dispositivo."
         },
         "cleaner": {
             "title": "Limpiar todas las ventanas",
@@ -75,7 +87,8 @@
             "cancelButton": "Cancelar"
         },
         "projects": {
-            "description": "Aquí hay algunos de mis proyectos recientes. Haga clic en cada uno para obtener más información."
+            "description": "Aquí hay algunos de mis proyectos recientes. Haga clic en cada uno para obtener más información.",
+            "eyebrow": "Proyectos destacados"
         },
         "contact": {
             "title": "Mi contacto",
@@ -84,7 +97,11 @@
             "location": "Ubicación: España/Remoto",
             "response": "Respuesta: Menos de 24 horas",
             "emailCta": "Enviar correo electrónico",
-            "curriculumCta": "Descargar currículum"
+            "curriculumCta": "Descargar currículum",
+            "eyebrow": "Contacto"
+        },
+        "experience": {
+            "eyebrow": "Trayectoria"
         }
     }
 }

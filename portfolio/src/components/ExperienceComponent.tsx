@@ -27,9 +27,14 @@ export default function ExperienceComponent({ experience }: { experience: Experi
                 {t(experience.company)}
               </p>
             </div>
-            <span className="mac-date-pill">
-              {formatRange(experience.startDate, experience.endDate, i18n.language)}
-            </span>
+            <div className="flex flex-wrap items-center justify-end gap-1.5">
+              <span className={`mac-experience-type-pill ${experience.type === "study" ? "is-study" : "is-internship"}`}>
+                {t(`data.experience.types.${experience.type}`)}
+              </span>
+              <span className="mac-date-pill">
+                {formatRange(experience.startDate, experience.endDate, i18n.language)}
+              </span>
+            </div>
           </div>
         </div>
       </div>

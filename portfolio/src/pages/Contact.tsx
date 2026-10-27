@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section className="mac-page">
       <div className="mac-page-heading">
-        <span className="mac-eyebrow">Get in touch</span>
+        <span className="mac-eyebrow">{t("pages.contact.eyebrow")}</span>
         <h1>{t("pages.contact.title")}</h1>
       </div>
 

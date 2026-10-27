@@ -10,12 +10,6 @@ import ERRCImage from "../assets/experience/errc.png";
 import DSTImage from "../assets/experience/dst.png";
 
 export const skills: Record<string, skillType> = {
-  Python: {
-    name: "Python",
-    logo_url:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    color: "#3776AB", 
-  },
   Java: {
     name: "Java",
     logo_url:
@@ -28,17 +22,23 @@ export const skills: Record<string, skillType> = {
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     color: "#3178C6",
   },
-  PHP: {
-    name: "PHP",
+  Python: {
+    name: "Python",
     logo_url:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-    color: "#8892BF", 
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    color: "#3776AB", 
   },
   JavaScript: {
     name: "JavaScript",
     logo_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     color: "#F7DF1E", 
+  },
+  PHP: {
+    name: "PHP",
+    logo_url:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    color: "#8892BF", 
   },
   Lua: {
     name: "Lua",
@@ -51,19 +51,19 @@ export const skills: Record<string, skillType> = {
 export const projects: ProjectType[] = [
   {
     id: 1,
-    title: "Routine-Fights",
-    description: "data.projects.routineFights.description",
-    tags: [skills["Python"], skills["TypeScript"]],
-    codeUrl: "https://github.com/rabgonzalez/Routine-Fights",
-    imageUrl: RoutineFightsImage,
-  },
-  {
-    id: 2,
     title: "MoviesXMovies",
     description: "data.projects.moviesXMovies.description",
     tags: [skills["Python"], skills["TypeScript"]],
     codeUrl: "https://moviesxmovies.jonaykb.com/docs/",
     imageUrl: MoviesXMoviesImage,
+  },
+  {
+    id: 2,
+    title: "Routine-Fights",
+    description: "data.projects.routineFights.description",
+    tags: [skills["Python"], skills["TypeScript"]],
+    codeUrl: "https://github.com/rabgonzalez/Routine-Fights",
+    imageUrl: RoutineFightsImage,
   },
   {
     id: 3,
@@ -107,6 +107,7 @@ export const experiences: ExperienceType[] = [
     description: "data.experience.DAM.description",
     startDate: "2023-09",
     endDate: "2025-05",
+    type: "study",
     tags: [skills["Java"], skills["TypeScript"], skills["PHP"]],
     icon: TelesforoImage,
   },
@@ -117,6 +118,7 @@ export const experiences: ExperienceType[] = [
     description: "data.experience.ERRC.description",
     startDate: "2025-03",
     endDate: "2025-05",
+    type: "internship",
     tags: [skills["Python"], skills["TypeScript"]],
     icon: ERRCImage,
   },
@@ -127,6 +129,7 @@ export const experiences: ExperienceType[] = [
     description: "data.experience.DAW.description",
     startDate: "2025-09",
     endDate: "2026-05",
+    type: "study",
     tags: [skills["Python"], skills["JavaScript"]],
     icon: TelesforoImage,
   },
@@ -137,6 +140,7 @@ export const experiences: ExperienceType[] = [
     description: "data.experience.DST.description",
     startDate: "2026-02",
     endDate: "2026-05",
+    type: "internship",
     tags: [skills["Java"], skills["TypeScript"]],
     icon: DSTImage,
   }

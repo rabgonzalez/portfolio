@@ -11,7 +11,7 @@ export default function Experience() {
   return (
     <section className="mac-page mac-experience-page">
       <div className="mac-page-heading">
-        <span className="mac-eyebrow">Career</span>
+        <span className="mac-eyebrow">{t("pages.experience.eyebrow")}</span>
         <h1>{t("apps.experience")}</h1>
       </div>
 

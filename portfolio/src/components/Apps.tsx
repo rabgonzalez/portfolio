@@ -6,23 +6,12 @@ export default function Apps({ apps }: { apps: DockApp[] }) {
   const { t } = useTranslation();
 
   return (
-    <nav className="fixed top-4 left-4 pointer-events-none">
-      <ul
-        className="
-            pointer-events-auto
-            flex flex-col
-            gap-8
-          "
-      >
-        {apps.map(app => (
-          <AppIcon
-            key={app.appId}
-            appId={app.appId}
-            icon={app.icon}
-            label={t(app.label)}
-          />
+    <nav className="fixed left-3 top-3 z-20 sm:left-5 sm:top-5" aria-label="Applications">
+      <ul className="flex flex-col gap-3 sm:gap-4">
+        {apps.map((app) => (
+          <AppIcon key={app.appId} appId={app.appId} icon={app.icon} label={t(app.label)} />
         ))}
       </ul>
     </nav>
-  )
+  );
 }

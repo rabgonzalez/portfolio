@@ -3,19 +3,23 @@ import { projects } from "../data/data";
 import ProjectComponent from "../components/ProjectComponent";
 
 export default function Projects() {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    return (
-        <div>
-            <h1 className="text-[28px] font-bold">{t("apps.projects")}</h1>
-            <p className="text-sm leading-relaxed mb-4">
-                {t("pages.projects.description")}
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-                {projects.map((project) => (
-                    <ProjectComponent key={project.id} project={project} />
-                ))}
-            </div>
-        </div >
-    );
+  return (
+    <section className="mac-page">
+      <div className="mac-page-heading">
+        <span className="mac-eyebrow">Selected work</span>
+        <h1>{t("apps.projects")}</h1>
+        <p>{t("pages.projects.description")}</p>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, index) => (
+          <div key={project.id} className="animate-mac-in" style={{ animationDelay: `${index * 55}ms` }}>
+            <ProjectComponent project={project} />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

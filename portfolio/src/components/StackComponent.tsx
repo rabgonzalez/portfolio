@@ -1,29 +1,31 @@
 import type { skillType } from "../types";
+import ImageWithSkeleton from "./ImageWithSkeleton";
 
 export default function StackComponent({ skill, type }: { skill: skillType; type: "skill" | "project" }) {
+  if (type === "skill") {
     return (
-        <>
-            {type == "skill" && (
-                <div
-                    key={skill.name}
-                    className="flex items-center gap-2 rounded-md border px-3 py-2 w-fit"
-                    style={{ backgroundColor: skill.color + "20", borderColor: skill.color }}
-                >
-                    <img src={skill.logo_url} alt={skill.name} className="w-5 h-5" />
-                    <span className="text-sm font-medium">{skill.name}</span>
-                </div>
-            )}
-            {
-                type == "project" && (
-                    <span
-                        key={skill.name}
-                        style={{ backgroundColor: skill.color + "20", borderColor: skill.color }}
-                        className={`text-xs px-2 py-0.5 rounded-xl border`}
-                    >
-                        {skill.name}
-                    </span>
-                )
-            }
-        </>
-    )
+      <div
+        className="mac-skill-pill"
+        style={{ backgroundColor: `${skill.color}12`, borderColor: `${skill.color}35` }}
+      >
+        <ImageWithSkeleton
+          src={skill.logo_url}
+          alt={skill.name}
+          containerClassName="h-5 w-5 shrink-0 rounded-md"
+          skeletonClassName="rounded-md"
+          className="object-contain"
+        />
+        <span>{skill.name}</span>
+      </div>
+    );
+  }
+
+  return (
+    <span
+      className="mac-tech-pill"
+      style={{ backgroundColor: `${skill.color}10`, borderColor: `${skill.color}28` }}
+    >
+      {skill.name}
+    </span>
+  );
 }

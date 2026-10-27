@@ -19,9 +19,12 @@ interface SettingsContextType {
 const SettingsContext = createContext<SettingsContextType | null>(null)
 
 export function SettingsProvider({ children }: { children: ReactNode }) {
-  const [wallpaper, setWallpaperState] = useState(
-    () => localStorage.getItem(WALLPAPER_KEY) || DEFAULT_WALLPAPER
-  )
+  const [wallpaper, setWallpaperState] = useState(DEFAULT_WALLPAPER)
+
+  useEffect(() => {
+    const savedWallpaper = localStorage.getItem(WALLPAPER_KEY)
+    if (savedWallpaper) setWallpaperState(savedWallpaper)
+  }, [])
 
   const getWebLanguage = useCallback(() => {
     const lang = localStorage.getItem(LANGUAGE_KEY)

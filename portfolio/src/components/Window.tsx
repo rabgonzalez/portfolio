@@ -10,7 +10,7 @@ const WINDOW_WIDTH = 800
 
 export default function Window({ instance }: { instance: WindowInstance }) {
     const { closeWindow, toggleMax, focusWindow, moveWindow } = useWindows()
-    const { id, appId, max, zIndex, x, y } = instance
+    const { id, appId, max, zIndex, x, y, focus } = instance
     const { title, component: Content } = APP_REGISTRY[appId]
     const windowRef = useRef<HTMLDivElement>(null)
     const { t } = useTranslation()
@@ -55,11 +55,11 @@ export default function Window({ instance }: { instance: WindowInstance }) {
                 className="window-titlebar flex items-center gap-2 px-4 py-2 bg-black/10 border-b border-white/20 cursor-move select-none"
             >
                 <div className="window-controls flex items-center gap-2">
-                    <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full bg-red-500`} onClick={() => closeWindow(id)} />
+                    <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full ${focus ? 'bg-red-500' : 'bg-gray-500'}`} onClick={() => focus ? closeWindow(id) : focusWindow(id)} />
                     {!isMobile && (
-                        <button className="w-3 h-3 rounded-full bg-yellow-500" onClick={() => closeWindow(id)} />
+                        <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full ${focus ? 'bg-yellow-500' : 'bg-gray-500'}`} onClick={() => focus ? closeWindow(id) : focusWindow(id)} />
                     )}
-                    <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full bg-green-500`} onClick={() => toggleMax(id)} />
+                    <button className={`${isMobile ? 'w-5 h-5' : 'w-3 h-3'} rounded-full ${focus ? 'bg-green-500' : 'bg-gray-500'}`} onClick={() => focus ? toggleMax(id) : focusWindow(id)} />
                 </div>
                 <span className="ml-2 text-sm text-black/80 dark:text-white/80 font-medium" style={{ fontWeight: 900 }}>{t(title)}</span>
             </div>

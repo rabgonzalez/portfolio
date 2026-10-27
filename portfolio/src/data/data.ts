@@ -54,7 +54,7 @@ export const projects: ProjectType[] = [
     title: "MoviesXMovies",
     description: "data.projects.moviesXMovies.description",
     tags: [skills["Python"], skills["TypeScript"]],
-    codeUrl: "https://moviesxmovies.jonaykb.com/docs/",
+    codeUrl: "https://moviesxmovies.jonaykb.com",
     imageUrl: MoviesXMoviesImage,
   },
   {

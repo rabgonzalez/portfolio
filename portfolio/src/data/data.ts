@@ -78,7 +78,7 @@ export const projects: ProjectType[] = [
     title: "MC - Guess the Block",
     description: "data.projects.mcGuessTheBlock.description",
     tags: [skills["TypeScript"]],
-    codeUrl: "https://github.com/rabgonzalez/MC-GuessTheBlock",
+    codeUrl: "https://rabgonzalez.github.io/MC-GuessTheBlock/",
     imageUrl: GuessTheBlockImage,
   },
   {

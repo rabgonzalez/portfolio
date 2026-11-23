@@ -9,7 +9,8 @@
         "experience": "Experiencia",
         "projects": "Proyectos",
         "contact": "Contacto",
-        "settings": "Configuración"
+        "settings": "Configuración",
+        "browser": "Navegador"
     },
     "data": {
         "projects": {
@@ -28,8 +29,8 @@
             "lumino": {
                 "description": "Campus virtual"
             },
-            "movieAPI": {
-                "description": "API de películas"
+            "marcusmod": {
+                "description": "Mod variado del videojuego Balatro"
             }
         },
         "experience": {
@@ -103,5 +104,21 @@
         "experience": {
             "eyebrow": "Trayectoria"
         }
+    },
+    "browser": {
+        "newTab": "Nueva pestaña",
+        "closeTab": "Cerrar pestaña",
+        "back": "Atrás",
+        "forward": "Adelante",
+        "reload": "Recargar",
+        "addressPlaceholder": "Buscar o introducir dirección",
+        "go": "Ir",
+        "openExternal": "Abrir externamente",
+        "home": "Inicio",
+        "embeddingHint": "Algunas páginas impiden mostrarse dentro de un iframe.",
+        "welcome": "¿Qué quieres explorar?",
+        "subtitle": "Tus proyectos, disponibles desde este escritorio.",
+        "projects": "Tus proyectos",
+        "footerHint": "Si una página no se muestra, puede que su servidor bloquee la inserción. Ábrela externamente."
     }
 }

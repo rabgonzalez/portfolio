@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useIsMobile } from "../hooks/useIsMobile";
 
 const WINDOW_WIDTH = 800;
+const BROWSER_WIDTH = 1000;
 
 export default function Window({ instance }: { instance: WindowInstance }) {
   const { closeWindow, toggleMax, focusWindow, moveWindow } = useWindows();
@@ -23,7 +24,7 @@ export default function Window({ instance }: { instance: WindowInstance }) {
     if (max && windowRef.current) {
       const rect = windowRef.current.getBoundingClientRect();
       const relativeX = (e.clientX - rect.left) / rect.width;
-      const newX = e.clientX - relativeX * WINDOW_WIDTH;
+      const newX = e.clientX - relativeX * (appId === "browser" ? BROWSER_WIDTH : WINDOW_WIDTH);
       const newY = rect.top;
       moveWindow(id, newX, newY);
       toggleMax(id);
@@ -38,19 +39,19 @@ export default function Window({ instance }: { instance: WindowInstance }) {
     <div
       ref={windowRef}
       onPointerDown={() => focusWindow(id)}
-      style={max ? { zIndex, top: "1rem", left: "1rem", right: "1rem", bottom: "5.75rem" } : { zIndex, top: y, left: x, width: WINDOW_WIDTH }}
+      style={max ? { zIndex, top: "1rem", left: "1rem", right: "1rem", bottom: "5.75rem" } : { zIndex, top: y, left: x, width: appId === "browser" ? `min(${BROWSER_WIDTH}px, calc(100vw - 2rem))` : WINDOW_WIDTH, ...(appId === "browser" ? { height: isMobile ? "calc(100dvh - 7rem)" : 680 } : {}) }}
       className={`mac-window ${max ? "is-maximized" : ""} ${focus ? "is-focused" : ""}`}
     >
       <div onPointerDown={dragWindow} style={{ touchAction: "none" }} className="mac-titlebar select-none">
         <div className="window-controls" onPointerDown={(e) => e.stopPropagation()}>
           <button type="button" aria-label="Close" className={`mac-traffic-light mac-close ${focus ? "is-active" : ""}`} onClick={() => focus ? closeWindow(id) : focusWindow(id)} />
-          {!isMobile && <button type="button" aria-label="Minimize" className={`mac-traffic-light mac-minimize ${focus ? "is-active" : ""}`} onClick={() => focus ? closeWindow(id) : focusWindow(id)} />}
+          <button type="button" aria-label="Minimize" className={`mac-traffic-light mac-minimize ${focus ? "is-active" : ""}`} onClick={() => focus ? closeWindow(id) : focusWindow(id)} />
           <button type="button" aria-label="Maximize" className={`mac-traffic-light mac-maximize ${focus ? "is-active" : ""}`} onClick={() => focus ? toggleMax(id) : focusWindow(id)} />
         </div>
         <span className="mac-window-title">{t(title)}</span>
       </div>
 
-      <div className="mac-window-content">
+      <div className={`mac-window-content ${appId === "browser" ? "mac-window-content-browser" : ""}`}>
         <Content windowId={id} />
       </div>
     </div>

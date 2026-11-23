@@ -256,3 +256,92 @@ button, a { user-select: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Integrated project browser */
+.mac-window-content-browser { height: calc(100% - 42px); max-height: none; padding: 0; overflow: hidden; }
+.browser-app { height: 100%; min-height: 0; }
+.browser-control { display: inline-grid; width: 32px; height: 32px; flex: 0 0 32px; place-items: center; border-radius: 8px; color: rgba(70,70,75,.8); transition: background-color 150ms ease, color 150ms ease; }
+.browser-control:hover:not(:disabled) { background: rgba(0,0,0,.07); color: rgba(20,20,24,.95); }
+.browser-control:disabled { opacity: .28; cursor: not-allowed; }
+.dark .browser-control { color: rgba(230,230,235,.72); }
+.dark .browser-control:hover:not(:disabled) { background: rgba(255,255,255,.09); color: white; }
+.browser-tabs button { white-space: nowrap; }
+@media (max-width: 640px) {
+  .mac-window-content-browser { height: calc(100% - 42px); }
+  .browser-control { width: 29px; height: 32px; flex-basis: 29px; }
+}
+
+
+/* Integrated project browser */
+.mac-window:has(.browser-app) { display: flex; flex-direction: column; }
+.mac-window:has(.browser-app) .mac-window-content { flex: 1; min-height: 0; height: auto; max-height: none; padding: 0; overflow: hidden; }
+.browser-app { display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 0; color: rgba(20,20,24,.88); background: rgba(248,248,250,.96); }
+.dark .browser-app { color: rgba(255,255,255,.88); background: rgba(28,28,30,.96); }
+.browser-tabs { display: flex; align-items: center; gap: 5px; min-height: 42px; padding: 6px 10px 0; overflow-x: auto; border-bottom: 1px solid rgba(0,0,0,.07); background: rgba(0,0,0,.025); scrollbar-width: thin; }
+.dark .browser-tabs { border-bottom-color: rgba(255,255,255,.07); background: rgba(255,255,255,.025); }
+.browser-tab { display: flex; align-items: center; gap: 4px; min-width: 110px; max-width: 210px; height: 34px; padding: 0 7px 0 10px; border: 1px solid transparent; border-bottom: 0; border-radius: 9px 9px 0 0; color: rgba(0,0,0,.52); }
+.dark .browser-tab { color: rgba(255,255,255,.52); }
+.browser-tab.is-active { color: rgba(0,0,0,.78); border-color: rgba(0,0,0,.08); background: rgba(255,255,255,.72); }
+.dark .browser-tab.is-active { color: rgba(255,255,255,.84); border-color: rgba(255,255,255,.08); background: rgba(255,255,255,.07); }
+.browser-tab-select { display: flex; align-items: center; gap: 7px; min-width: 0; flex: 1; font-size: 11px; text-align: left; }
+.browser-tab-select span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.browser-tab-close, .browser-add-tab { display: grid; place-items: center; flex: 0 0 23px; width: 23px; height: 23px; border-radius: 6px; color: rgba(0,0,0,.42); }
+.browser-tab-close:hover, .browser-add-tab:hover { background: rgba(0,0,0,.07); color: rgba(0,0,0,.8); }
+.dark .browser-tab-close, .dark .browser-add-tab { color: rgba(255,255,255,.5); }
+.dark .browser-tab-close:hover, .dark .browser-add-tab:hover { background: rgba(255,255,255,.09); color: white; }
+.browser-add-tab { margin: 0 0 4px 2px; }
+.browser-toolbar { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 8px 13px; border-bottom: 1px solid rgba(0,0,0,.07); }
+.dark .browser-toolbar { border-bottom-color: rgba(255,255,255,.07); }
+.browser-navigation { display: flex; align-items: center; gap: 2px; }
+.browser-navigation button, .browser-external { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; color: rgba(0,0,0,.65); }
+.browser-navigation button:hover:not(:disabled), .browser-external:hover:not(:disabled) { background: rgba(0,0,0,.06); }
+.browser-navigation button:disabled, .browser-external:disabled { opacity: .28; cursor: not-allowed; }
+.dark .browser-navigation button, .dark .browser-external { color: rgba(255,255,255,.72); }
+.dark .browser-navigation button:hover:not(:disabled), .dark .browser-external:hover:not(:disabled) { background: rgba(255,255,255,.08); }
+.browser-address-form { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; height: 34px; padding: 0 9px; border: 1px solid rgba(0,0,0,.09); border-radius: 10px; background: rgba(0,0,0,.035); }
+.dark .browser-address-form { border-color: rgba(255,255,255,.09); background: rgba(0,0,0,.18); }
+.browser-address-icon { flex: 0 0 auto; color: rgba(0,0,0,.38); }
+.dark .browser-address-icon { color: rgba(255,255,255,.42); }
+.browser-address-form input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: inherit; font: inherit; font-size: 12px; }
+.browser-address-form input::placeholder { color: rgba(0,0,0,.36); }
+.dark .browser-address-form input::placeholder { color: rgba(255,255,255,.35); }
+.browser-address-form button { display: grid; place-items: center; width: 24px; height: 24px; flex: 0 0 auto; border-radius: 6px; color: rgba(0,0,0,.55); }
+.dark .browser-address-form button { color: rgba(255,255,255,.65); }
+.browser-viewport { position: relative; flex: 1; min-height: 0; overflow: auto; background: white; }
+.dark .browser-viewport { background: #202023; }
+.browser-iframe { display: block; width: 100%; height: 100%; min-height: 300px; border: 0; background: white; }
+.browser-frame-hint { position: absolute; right: 12px; bottom: 12px; display: flex; align-items: center; gap: 7px; max-width: min(620px, calc(100% - 24px)); padding: 8px 10px; border: 1px solid rgba(0,0,0,.09); border-radius: 10px; background: rgba(250,250,252,.94); color: rgba(0,0,0,.62); box-shadow: 0 5px 20px rgba(0,0,0,.10); font-size: 10px; backdrop-filter: blur(14px); }
+.dark .browser-frame-hint { border-color: rgba(255,255,255,.10); background: rgba(35,35,38,.94); color: rgba(255,255,255,.66); }
+.browser-frame-hint button { flex: 0 0 auto; color: #1674d1; font-weight: 650; }
+.browser-home { width: min(850px, 100%); margin: 0 auto; padding: clamp(25px, 5vw, 55px) clamp(17px, 4vw, 42px) 25px; }
+.browser-home-heading { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 28px; }
+.browser-home-mark { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 16px; border-radius: 17px; color: #2679d8; background: rgba(45,125,220,.10); }
+.browser-home-heading h1 { margin: 7px 0 0; font-size: clamp(23px, 4vw, 31px); font-weight: 650; letter-spacing: -.04em; }
+.browser-home-heading p { margin-top: 7px; color: rgba(0,0,0,.48); font-size: 13px; }
+.dark .browser-home-heading p { color: rgba(255,255,255,.48); }
+.browser-shortcuts { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.browser-shortcut { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 11px; border-radius: 12px; text-align: left; }
+.browser-shortcut img, .browser-shortcut-fallback { width: 43px; height: 43px; flex: 0 0 43px; border-radius: 9px; object-fit: cover; background: rgba(0,0,0,.06); }
+.browser-shortcut-fallback { display: grid; place-items: center; }
+.browser-shortcut-copy { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 3px; }
+.browser-shortcut-copy strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; font-weight: 650; }
+.browser-shortcut-copy small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgba(0,0,0,.45); font-size: 10px; }
+.dark .browser-shortcut-copy small { color: rgba(255,255,255,.45); }
+.browser-shortcut-arrow { flex: 0 0 auto; color: rgba(0,0,0,.35); }
+.dark .browser-shortcut-arrow { color: rgba(255,255,255,.38); }
+.browser-home-footnote { margin-top: 20px; text-align: center; color: rgba(0,0,0,.35); font-size: 10px; }
+.dark .browser-home-footnote { color: rgba(255,255,255,.35); }
+@media (max-width: 767px) {
+  .mac-window:has(.browser-app) .mac-window-content { padding: 0; }
+  .browser-tabs { min-height: 39px; padding-left: 7px; }
+  .browser-tab { min-width: 92px; max-width: 145px; }
+  .browser-toolbar { gap: 5px; min-height: 48px; padding: 6px 7px; }
+  .browser-navigation { gap: 0; }
+  .browser-navigation button { width: 27px; height: 29px; }
+  .browser-external { width: 27px; }
+  .browser-address-form { gap: 5px; padding: 0 7px; }
+  .browser-address-form input { font-size: 11px; }
+  .browser-frame-hint { right: 7px; bottom: 7px; gap: 5px; padding: 7px; font-size: 9px; }
+  .browser-shortcuts { grid-template-columns: 1fr; }
+  .browser-home { padding-top: 30px; }
+}

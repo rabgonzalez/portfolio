@@ -1,7 +1,7 @@
-import type { ExperienceType, ProjectType, skillType } from "../types";
+import type { ExperienceType, ProjectType, skillType, WebType } from "../types";
 import RoutineFightsImage from "../assets/projects/routine-fights.png";
 import MoviesXMoviesImage from "../assets/projects/moviesxmovies.webp";
-import MovieAPIImage from "../assets/projects/movie-api.png";
+import MarcusmodImage from "../assets/projects/marcusmod.png";
 import GuessTheBlockImage from "../assets/projects/guess-the-block.png";
 import TicTacToeImage from "../assets/projects/ticTacToe.jpg";
 import LuminoImage from "../assets/projects/lumino.png";
@@ -54,7 +54,7 @@ export const projects: ProjectType[] = [
     title: "MoviesXMovies",
     description: "data.projects.moviesXMovies.description",
     tags: [skills["Python"], skills["TypeScript"]],
-    codeUrl: "https://moviesxmovies.jonaykb.com",
+    codeUrl: "https://github.com/moviesxmovies/MoviesXMovies",
     imageUrl: MoviesXMoviesImage,
   },
   {
@@ -67,6 +67,14 @@ export const projects: ProjectType[] = [
   },
   {
     id: 3,
+    title: "MC - Guess the Block",
+    description: "data.projects.mcGuessTheBlock.description",
+    tags: [skills["TypeScript"]],
+    codeUrl: "https://github.com/rabgonzalez/MC-GuessTheBlock",
+    imageUrl: GuessTheBlockImage,
+  },
+  {
+    id: 4,
     title: "TicTacToe",
     description: "data.projects.ticTacToeSpanish.description",
     tags: [skills["Java"], skills["TypeScript"]],
@@ -74,28 +82,41 @@ export const projects: ProjectType[] = [
     imageUrl: TicTacToeImage,
   },
   {
-    id: 4,
-    title: "MC - Guess the Block",
-    description: "data.projects.mcGuessTheBlock.description",
-    tags: [skills["TypeScript"]],
-    codeUrl: "https://rabgonzalez.github.io/MC-GuessTheBlock/",
-    imageUrl: GuessTheBlockImage,
-  },
-  {
     id: 5,
     title: "Lumino",
     description: "data.projects.lumino.description",
     tags: [skills["Python"]],
-    codeUrl: "https://rabgonzalez.github.io/Lumino/",
+    codeUrl: "https://github.com/rabgonzalez/Lumino",
     imageUrl: LuminoImage,
   },
   {
     id: 6,
-    title: "MovieAPI",
-    description: "data.projects.movieAPI.description",
-    tags: [skills["PHP"], skills["TypeScript"]],
-    codeUrl: "https://github.com/rabgonzalez/MovieAPI",
-    imageUrl: MovieAPIImage,
+    title: "Marcusmod",
+    description: "data.projects.marcusmod.description",
+    tags: [skills["Lua"]],
+    codeUrl: "https://github.com/rabgonzalez/Marcusmod",
+    imageUrl: MarcusmodImage,
+  }
+];
+
+export const webs: WebType[] = [
+  {
+    id: 1,
+    title: "MoviesXMovies",
+    codeUrl: "https://moviesxmovies.jonaykb.com",
+    imageUrl: MoviesXMoviesImage
+  },
+  {
+    id: 2,
+    title: "MC - Guess the Block",
+    codeUrl: "https://guess-the-block.jonaykb.com",
+    imageUrl: GuessTheBlockImage,
+  },
+  {
+    id: 3,
+    title: "Lumino",
+    codeUrl: "https://rabgonzalez.github.io/Lumino/",
+    imageUrl: LuminoImage,
   }
 ];
 

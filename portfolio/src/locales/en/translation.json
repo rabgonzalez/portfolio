@@ -9,7 +9,8 @@
         "experience": "Experience",
         "projects": "Projects",
         "contact": "Contact",
-        "settings": "Settings"
+        "settings": "Settings",
+        "browser": "Browser"
     },
     "data": {
         "projects": {
@@ -28,8 +29,8 @@
             "lumino": {
                 "description": "Virtual campus"
             },
-            "movieAPI": {
-                "description": "Movie API"
+            "marcusmod": {
+                "description": "Balatro's videogame miscellaneous mod"
             }
         },
         "experience": {
@@ -103,5 +104,20 @@
         "experience": {
             "eyebrow": "Career"
         }
+    },
+    "browser": {
+        "newTab": "New tab",
+        "closeTab": "Close tab",
+        "back": "Back",
+        "forward": "Forward",
+        "reload": "Reload",
+        "addressPlaceholder": "Search or enter address",
+        "go": "Go",
+        "openExternal": "Open externally",
+        "home": "Home",
+        "welcome": "What would you like to explore?",
+        "subtitle": "Your projects, available from this desktop.",
+        "projects": "Your projects",
+        "footerHint": "If a page does not appear, its server may block embedding. Open it externally."
     }
 }

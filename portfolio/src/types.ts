@@ -39,6 +39,13 @@ export type ProjectType = {
   imageUrl?: string;
 };
 
+export type WebType = {
+  id: number;
+  title: string;
+  codeUrl: string;
+  imageUrl?: string;
+};
+
 export type ExperienceType = {
   id: number;
   title: string;

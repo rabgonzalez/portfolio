@@ -1,5 +1,6 @@
 import {
   Briefcase,
+  Globe,
   BrushCleaning,
   Folder,
   Mail,
@@ -13,6 +14,7 @@ import Contact from "./pages/Contact";
 import Settings from "./pages/Settings";
 import type { DockApp } from "./types";
 import Cleaner from "./pages/Cleaner";
+import Browser from "./pages/Browser";
 import wallpaper1 from "./assets/wallpapers/wallpaper.png";
 import wallpaper2 from "./assets/wallpapers/wallpaper2.png";
 import wallpaper3 from "./assets/wallpapers/wallpaper3.png";
@@ -24,6 +26,7 @@ export const DOCK_APPS: DockApp[] = [
   { appId: "profile", icon: UserRound, label: "apps.profile" },
   { appId: "experience", icon: Briefcase, label: "apps.experience" },
   { appId: "projects", icon: Folder, label: "apps.projects" },
+  { appId: "browser", icon: Globe, label: "apps.browser" },
   { appId: "contact", icon: Mail, label: "apps.contact" },
   { appId: "settings", icon: SettingsIcon, label: "apps.settings" },
 ];
@@ -35,6 +38,7 @@ export const APPS: DockApp[] = [
 
 export const APP_REGISTRY = {
   cleaner: { title: "apps.cleaner", component: Cleaner },
+  browser: { title: "apps.browser", component: Browser },
   profile: { title: "apps.profile", component: Profile },
   experience: { title: "apps.experience", component: Experience },
   projects: { title: "apps.projects", component: Projects },

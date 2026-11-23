@@ -46,8 +46,6 @@ export default function Browser() {
   const [reloadKey, setReloadKey] = useState(0);
   const activeTab = tabs.find((tab) => tab.id === activeId) ?? tabs[0];
   const currentUrl = activeTab.history[activeTab.historyIndex] ?? "";
-  const canGoBack = activeTab.historyIndex > 0;
-  const canGoForward = activeTab.historyIndex < activeTab.history.length - 1;
 
   const webLinks = useMemo(
     () => webs.filter((web) => Boolean(web.codeUrl)),

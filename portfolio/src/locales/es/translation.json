@@ -117,8 +117,8 @@
         "home": "Inicio",
         "embeddingHint": "Algunas páginas impiden mostrarse dentro de un iframe.",
         "welcome": "¿Qué quieres explorar?",
-        "subtitle": "Tus proyectos, disponibles desde este escritorio.",
-        "projects": "Tus proyectos",
+        "subtitle": "Prueba algunos de mis proyectos publicados",
+        "projects": "Mis proyectos",
         "footerHint": "Si una página no se muestra, puede que su servidor bloquee la inserción. Ábrela externamente."
     }
 }

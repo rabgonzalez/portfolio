@@ -116,8 +116,8 @@
         "openExternal": "Open externally",
         "home": "Home",
         "welcome": "What would you like to explore?",
-        "subtitle": "Your projects, available from this desktop.",
-        "projects": "Your projects",
+        "subtitle": "Try some of my launched projects",
+        "projects": "My projects",
         "footerHint": "If a page does not appear, its server may block embedding. Open it externally."
     }
 }
